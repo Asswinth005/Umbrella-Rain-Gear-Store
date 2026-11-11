@@ -437,10 +437,17 @@
         </div>
     </section>
 
-    <!-- ========== COLLECTIONS FILTER CHIPS ========== -->
-    <section class="py-8 bg-white dark:bg-[#0F172A] border-b border-sand dark:border-slate-700/40 relative z-20">
+    <!-- ========== COLLECTIONS GRID ========== -->
+    <section id="collections-grid" class="py-16 bg-cream/40 dark:bg-slate-800/20">
         <div class="container mx-auto px-6">
-            <div class="flex items-center gap-3 overflow-x-auto pb-1" style="scrollbar-width:none;">
+            <div class="text-center mb-8">
+                <span class="text-tech dark:text-neon font-semibold tracking-wider text-sm uppercase bg-white/60 dark:bg-slate-800/60 px-5 py-1.5 rounded-full inline-block">🌧️ Shop the Edit</span>
+                <h2 class="text-3xl md:text-4xl font-display font-bold mt-4 text-soil dark:text-white">Featured <span class="text-tech dark:text-neon">Collections</span></h2>
+                <p class="text-dusk dark:text-gray-300 max-w-xl mx-auto mt-3">Each collection is built around a specific need — so you get gear that works together.</p>
+            </div>
+
+            <!-- Filter Chips Integrated into Second Section -->
+            <div class="flex items-center justify-center gap-2.5 md:gap-3 overflow-x-auto pb-3 mb-10 max-w-4xl mx-auto" style="scrollbar-width:none;">
                 <span class="text-xs font-bold uppercase tracking-wider text-dusk dark:text-gray-400 shrink-0">Filter:</span>
                 <button class="collection-chip active" data-filter="all"><i class="fas fa-border-all"></i> All Collections</button>
                 <button class="collection-chip" data-filter="commuter"><i class="fas fa-briefcase"></i> City Commuter</button>
@@ -448,17 +455,6 @@
                 <button class="collection-chip" data-filter="festival"><i class="fas fa-music"></i> Festival</button>
                 <button class="collection-chip" data-filter="kids"><i class="fas fa-child"></i> Kids</button>
                 <button class="collection-chip" data-filter="limited"><i class="fas fa-bolt"></i> Limited Drops</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== COLLECTIONS GRID ========== -->
-    <section id="collections-grid" class="py-16 bg-cream/40 dark:bg-slate-800/20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <span class="text-tech dark:text-neon font-semibold tracking-wider text-sm uppercase bg-white/60 dark:bg-slate-800/60 px-5 py-1.5 rounded-full inline-block">🌧️ Shop the Edit</span>
-                <h2 class="text-3xl md:text-4xl font-display font-bold mt-4 text-soil dark:text-white">Featured <span class="text-tech dark:text-neon">Collections</span></h2>
-                <p class="text-dusk dark:text-gray-300 max-w-xl mx-auto mt-3">Each collection is built around a specific need — so you get gear that works together.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-6 gap-6 max-w-6xl mx-auto">
