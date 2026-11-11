@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | RainGuard · Shop by Category</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563EB'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12h20c0-5.52-4.48-10-10-10zm0 2c3.86 0 7.19 2.59 8.15 6H3.85C4.81 6.59 8.14 4 12 4zm-1 14h2v4h-2v-4z'/%3E%3C/svg%3E">
+
+    <script src="tailwind.js"></script>
+    <script>
+        if (typeof tailwind === 'undefined') {
+            document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        herb: '#4A7C59', clay: '#C27A4A', sand: '#E8DCC4', soil: '#5C4B3A',
+                        cream: '#F9F5ED', dusk: '#6D6875', tech: '#2563EB', techdark: '#1E3A8A',
+                        neon: '#22D3EE', slatebg: '#0F172A', rain: '#3B6E9A', mist: '#D4E3F0',
+                        storm: '#1E2F4A', cloud: '#F0F4F8', thunder: '#F5B041', bark: '#5C4B3A',
+                    },
+                    fontFamily: {
+                        'display': ['"Poppins"', 'system-ui', 'sans-serif'],
+                        'body': ['"Inter"', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float-slow': 'floatSlow 6s ease-in-out infinite',
+                        'spin-slow': 'spinSlow 12s linear infinite',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-gentle': 'bounceGentle 2.5s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                        'rain-drop': 'rainDrop 3s ease-in infinite',
+                    },
+                    keyframes: {
+                        floatSlow: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+                        spinSlow: { '0%': { transform: 'rotate(0deg)' }, '100%': { transform: 'rotate(360deg)' } },
+                        slideUp: { '0%': { transform: 'translateY(40px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        bounceGentle: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-5px)' } },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        pulseGlow: { '0%, 100%': { boxShadow: '0 0 5px rgba(34,211,238,0.3)' }, '50%': { boxShadow: '0 0 20px rgba(34,211,238,0.6)' } },
+                        rainDrop: { '0%': { transform: 'translateY(-10px)', opacity: '0' }, '20%': { opacity: '0.7' }, '80%': { opacity: '0.9' }, '100%': { transform: 'translateY(20px)', opacity: '0' } },
+                    },
+                    backgroundImage: {
+                        'rain-pattern': "radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 70%)",
+                        'umbrella-texture': "url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z%22 fill=%22rgba(37,99,235,0.03)%22/%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { background-color: #F9F5ED; color: #5C4B3A; font-family: 'Inter', system-ui, sans-serif; }
+        .dark body { background-color: #0B1120; color: #E2E8F0; }
+        .rain-pattern, .umbrella-texture, body.rain-pattern, body.umbrella-texture {
+            background-image: radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 70%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z' fill='rgba(37,99,235,0.03)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+        }
+        .dark .rain-pattern, .dark .umbrella-texture, .dark body.rain-pattern, .dark body.umbrella-texture {
+            background-image: radial-gradient(circle at 20% 30%, rgba(34, 211, 238, 0.04) 0%, transparent 70%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z' fill='rgba(34,211,238,0.02)'/%3E%3C/svg%3E");
+        }
+        .dark body > nav { background-color: rgba(15, 23, 42, 0.96) !important; border-color: rgba(37, 99, 235, 0.25) !important; }
+        .dark section.bg-white, .dark section[class*="bg-white"] { background-color: #0F172A !important; }
+        body::-webkit-scrollbar { width: 6px; }
+        body::-webkit-scrollbar-track { background: #E8DCC4; border-radius: 10px; }
+        body::-webkit-scrollbar-thumb { background: #2563EB; border-radius: 10px; }
+        .dark body::-webkit-scrollbar-track { background: #1E293B; }
+        .dark body::-webkit-scrollbar-thumb { background: #22D3EE; }
+
+        .gear-card { background: white; border-radius: 24px; transition: all 0.35s ease; border: 1px solid rgba(37, 99, 235, 0.12); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04); }
+        .dark .gear-card { background: #1E293B; border-color: rgba(34, 211, 238, 0.2); }
+        .gear-card:hover { transform: translateY(-6px); box-shadow: 0 20px 35px -12px rgba(37, 99, 235, 0.25); border-color: #2563EB; }
+        .dark .gear-card:hover { border-color: #22D3EE; }
+
+        .btn-primary { background-color: #2563EB; color: white; font-weight: 600; border-radius: 50px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35); }
+        .btn-primary:hover { background-color: #1D4ED8; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45); }
+        .btn-outline { border: 1.5px solid #2563EB; color: #2563EB; background: transparent; border-radius: 50px; font-weight: 500; transition: all 0.3s; }
+        .btn-outline:hover { background-color: #2563EB; color: white; transform: translateY(-2px); }
+        .dark .btn-outline { border-color: #22D3EE; color: #22D3EE; }
+        .dark .btn-outline:hover { background-color: #22D3EE; color: #0F172A; }
+        .btn-outline.text-neon { border-color: #22D3EE !important; color: #22D3EE !important; }
+        .btn-outline.text-neon:hover { background-color: #22D3EE !important; color: #0F172A !important; }
+
+        .nav-link { position: relative; font-weight: 500; }
+        .nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2.5px; background-color: #2563EB; transition: width 0.25s ease; border-radius: 3px; }
+        .dark .nav-link::after { background-color: #22D3EE; }
+        .nav-link:hover::after { width: 100%; }
+
+        .dropdown-tech { position: relative; }
+        .dropdown-tech-menu { position: absolute; top: 100%; left: 0; min-width: 210px; background: white; border-radius: 18px; padding: 0.6rem 0; box-shadow: 0 18px 32px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(12px); transition: all 0.25s ease; z-index: 1000; border: 1px solid rgba(37, 99, 235, 0.2); }
+        .dropdown-tech-menu::before { content: ''; position: absolute; top: -12px; left: 0; right: 0; height: 12px; }
+        .dark .dropdown-tech-menu { background: #1E293B; border-color: rgba(34, 211, 238, 0.3); }
+        .dropdown-tech:hover .dropdown-tech-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-item { display: flex; align-items: center; padding: 0.65rem 1.4rem; transition: all 0.2s; color: #5C4B3A; }
+        .dark .dropdown-item { color: #E2E8F0; }
+        .dropdown-item:hover { background-color: #F9F5ED; color: #2563EB; padding-left: 1.7rem; }
+        .dark .dropdown-item:hover { background-color: #0F172A; color: #22D3EE; }
+        .dropdown-item i { margin-right: 0.75rem; width: 20px; }
+
+        .mobile-menu-tech { background: white; max-height: 0; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 0 0 24px 24px; }
+        .dark .mobile-menu-tech { background: #0F172A; }
+        .mobile-menu-tech.open { max-height: 80vh; overflow-y: auto; scrollbar-width: none; }
+        .mobile-menu-tech.open::-webkit-scrollbar { display: none; }
+
+        .stat-badge { background: white; border-radius: 24px; padding: 1rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); border: 1px solid rgba(37, 99, 235, 0.15); }
+        .dark .stat-badge { background: #1E293B; border-color: rgba(34, 211, 238, 0.2); }
+
+        .testimonial-card { background: white; border-radius: 28px; padding: 1.8rem; border-left: 5px solid #2563EB; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05); }
+        .dark .testimonial-card { background: #1E293B; border-left-color: #22D3EE; }
+
+        .social-icon-tech { width: 38px; height: 38px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background-color: #F9F5ED; color: #2563EB; transition: all 0.3s; }
+        .social-icon-tech:hover { background-color: #2563EB; color: white; transform: translateY(-3px); }
+        .dark .social-icon-tech { background-color: #334155; color: #E2E8F0; }
+        .dark .social-icon-tech:hover { background-color: #22D3EE; color: #0F172A; }
+
+        [dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+        [dir="rtl"] .border-l-4 { border-left-width: 0 !important; border-right-width: 4px !important; }
+        [dir="rtl"] .ml-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+        html[dir="rtl"] .dropdown-tech-menu { left: auto; right: 0; }
+        html[dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
+        html[dir="rtl"] .dropdown-item:hover { padding-left: 1.4rem; padding-right: 1.7rem; }
+        html[dir="rtl"] .testimonial-card { border-left: none; border-right: 5px solid #2563EB; }
+        html[dir="rtl"].dark .testimonial-card, .dark html[dir="rtl"] .testimonial-card { border-right-color: #22D3EE; }
+        html[dir="rtl"] .text-left { text-align: right; }
+
+        .dark input, .dark select, .dark textarea { background-color: #0F172A !important; color: #FFFFFF !important; border-color: rgba(34, 211, 238, 0.3) !important; }
+        .dark input::placeholder, .dark textarea::placeholder { color: #94A3B8 !important; opacity: 1 !important; }
+        .dark select option { background-color: #1E293B !important; color: #FFFFFF !important; }
+        .dark label { color: #F1F5F9 !important; }
+
+        /* ========== NEW PRODUCTS PAGE STYLES ========== */
+        .products-hero {
+            background: linear-gradient(150deg, #0F172A 0%, #1E2F4A 55%, #243A5C 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .products-hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -5%;
+            width: 55vw;
+            height: 55vw;
+            background: radial-gradient(circle, rgba(37,99,235,0.22) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .products-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -35%;
+            left: -10%;
+            width: 45vw;
+            height: 45vw;
+            background: radial-gradient(circle, rgba(34,211,238,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Category tabs (pill-style) */
+        .cat-tab {
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #5C4B3A;
+            background: white;
+            border: 1.5px solid #E8DCC4;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .cat-tab:hover { border-color: #2563EB; color: #2563EB; }
+        .cat-tab.active {
+            background: #2563EB;
+            color: white;
+            border-color: #2563EB;
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+        }
+        .dark .cat-tab { background: #1E293B; border-color: #334155; color: #E2E8F0; }
+        .dark .cat-tab:hover { border-color: #22D3EE; color: #22D3EE; }
+        .dark .cat-tab.active { background: #22D3EE; color: #0F172A; border-color: #22D3EE; box-shadow: 0 6px 16px rgba(34, 211, 238, 0.3); }
+
+        /* Product card (new style with quick actions overlay) */
+        .product-card {
+            background: white;
+            border-radius: 22px;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 44px -16px rgba(37, 99, 235, 0.25);
+            border-color: #2563EB;
+        }
+        .dark .product-card { background: #1E293B; border-color: rgba(34, 211, 238, 0.15); }
+        .dark .product-card:hover { border-color: #22D3EE; }
+
+        .product-card .quick-actions {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            z-index: 5;
+        }
+        .product-card:hover .quick-actions { opacity: 1; transform: translateX(0); }
+        .quick-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: white;
+            color: #2563EB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: all 0.2s;
+        }
+        .quick-btn:hover { background: #2563EB; color: white; transform: scale(1.1); }
+        .dark .quick-btn { background: #334155; color: #22D3EE; }
+        .dark .quick-btn:hover { background: #22D3EE; color: #0F172A; }
+
+        .product-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.3rem 0.75rem;
+            border-radius: 50px;
+            z-index: 5;
+        }
+
+        /* Filter sidebar */
+        .filter-panel {
+            background: white;
+            border-radius: 22px;
+            padding: 1.5rem;
+            border: 1px solid rgba(37, 99, 235, 0.12);
+            position: sticky;
+            top: 7rem;
+        }
+        .dark .filter-panel { background: #1E293B; border-color: rgba(34, 211, 238, 0.18); }
+
+        .filter-check {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.5rem 0.65rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 0.875rem;
+            color: #5C4B3A;
+        }
+        .filter-check:hover { background: #F9F5ED; }
+        .dark .filter-check { color: #E2E8F0; }
+        .dark .filter-check:hover { background: #0F172A; }
+        .filter-check input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #2563EB;
+            border-radius: 4px;
+        }
+
+        /* Featured hero product banner */
+        .featured-banner {
+            background: linear-gradient(120deg, #1E2F4A 0%, #2563EB 130%);
+            border-radius: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+        .featured-banner::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(34,211,238,0.25) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* Category spotlight strip */
+        .spotlight-tile {
+            border-radius: 22px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.35s ease;
+            cursor: pointer;
+        }
+        .spotlight-tile:hover { transform: translateY(-4px); box-shadow: 0 18px 36px -12px rgba(37, 99, 235, 0.3); }
+        .spotlight-tile img { transition: transform 0.5s ease; }
+        .spotlight-tile:hover img { transform: scale(1.08); }
+
+        /* Sort dropdown */
+        .sort-select {
+            background: white;
+            border: 1.5px solid #E8DCC4;
+            border-radius: 50px;
+            padding: 0.55rem 2.4rem 0.55rem 1.2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #5C4B3A;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235C4B3A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .sort-select:focus { outline: none; border-color: #2563EB; }
+        .dark .sort-select { background-color: #1E293B; color: #E2E8F0; border-color: #334155; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23E2E8F0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); }
+        .dark .sort-select:focus { border-color: #22D3EE; }
+
+        /* mobile filter drawer */
+        @media (max-width: 1023px) {
+            .filter-panel { position: static; display: none; }
+            .filter-panel.show-mobile { display: block; }
+        }
+    </style>
+</head>
+
+<body class="rain-pattern umbrella-texture">
+
+    <!-- ========== NAVIGATION – copied from reference ========== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#0F172A]/95 backdrop-blur-md border-b border-sand dark:border-slate-700/50 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-24 md:h-24 py-3 md:py-0">
+                <div class="flex items-center flex-1">
+                    <a class='flex items-center gap-2 md:gap-3 group shrink-0' href='index.html'>
+                        <div class="w-9 h-9 md:w-10 md:h-10 bg-tech rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition duration-300">
+                            <i class="fas fa-umbrella text-white text-base md:text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-lg md:text-2xl font-display font-bold tracking-tight text-soil dark:text-white">RainGuard</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center justify-center gap-4 xl:gap-8 shrink-0">
+                    <div class="dropdown-tech">
+                        <button class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition flex items-center gap-1 py-2 whitespace-nowrap text-sm xl:text-base">
+                            Home <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </button>
+                        <div class="dropdown-tech-menu">
+                            <a class="dropdown-item" href="index.html">Home 1</a>
+                            <a class="dropdown-item" href="home2.html">Home 2</a>
+                        </div>
+                    </div>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="about.html">About</a>
+                    <a class="nav-link text-tech dark:text-neon font-bold transition whitespace-nowrap text-sm xl:text-base" href="products.html">Products</a>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="collections.html">Collections</a>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="corporate.html">Corporate Branding</a>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="contact.html">Contact</a>
+                </div>
+
+                <div class="flex items-center justify-end flex-1 gap-3 lg:gap-4 shrink-0">
+                    <div class="hidden lg:flex items-center gap-4">
+                        <a href="contact.html" class="btn-primary h-10 px-5 text-sm font-semibold inline-flex items-center justify-center whitespace-nowrap">Enquire Now</a>
+                        <button id="theme-toggle" class="w-10 h-10 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon hover:scale-110 transition flex items-center justify-center">
+                            <i class="fas fa-moon dark:hidden text-tech"></i>
+                            <i class="fas fa-sun hidden dark:inline text-amber-300"></i>
+                        </button>
+                        <button id="rtl-toggle" class="w-10 h-10 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon hover:scale-110 transition flex items-center justify-center font-bold text-base" title="Toggle RTL/LTR">⇄</button>
+                    </div>
+
+                    <button id="mobile-toggle" class="lg:hidden w-10 h-10 rounded-full bg-tech text-white flex items-center justify-center shadow-md">
+                        <i class="fas fa-bars text-base"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-tech lg:hidden">
+                <div class="py-4 px-3 space-y-1">
+                    <div class="py-1">
+                        <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition cursor-pointer">
+                            <span class="flex items-center gap-2"><i class="fas fa-home text-sm"></i> Home</span>
+                            <i id="home-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300"></i>
+                        </button>
+                        <div id="home-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+                            <a class="block py-2.5 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="index.html">
+                                <i class="far fa-circle mr-2 text-xs"></i> Home 1
+                            </a>
+                            <a class="block py-2.5 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="home2.html">
+                                <i class="far fa-circle mr-2 text-xs"></i> Home 2
+                            </a>
+                        </div>
+                    </div>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="about.html">About</a>
+                    <a class="block py-3 px-4 font-medium text-tech dark:text-neon bg-tech/5 border-l-4 border-tech rounded-xl transition" href="products.html">Products</a>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="collections.html">Collections</a>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="corporate.html">Corporate Branding</a>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="contact.html">Contact</a>
+                    <div class="flex flex-col gap-3 pt-5 mt-3 border-t border-sand dark:border-slate-700/50">
+                        <a class="text-center btn-primary py-2.5 rounded-full font-semibold" href="contact.html">Enquire Now</a>
+                        <div class="flex gap-3">
+                            <button id="mobile-theme-toggle" class="flex-1 py-2 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon text-sm font-medium flex items-center gap-2 justify-center">
+                                <i class="fas fa-moon dark:hidden text-tech"></i><i class="fas fa-sun hidden dark:inline text-amber-300"></i>
+                                Theme
+                            </button>
+                            <button id="mobile-rtl-toggle" class="flex-1 py-2 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon text-sm font-medium flex items-center gap-2 justify-center">
+                                ⇄ RTL Mode
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PRODUCTS HERO ========== -->
+    <section class="products-hero pt-32 pb-20 text-white relative overflow-hidden bg-[#0F172A]">
+        <!-- Site-related Hero Background Image & Gradient Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/products-hero-canopy.jpg" alt="Colorful umbrella collection canopy" class="w-full h-full object-cover opacity-35">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0F172A]/85 via-[#0F172A]/75 to-[#0F172A]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center animate-slide-up">
+                <nav class="flex items-center justify-center gap-2 text-xs font-medium text-gray-400 mb-5">
+                    <a href="index.html" class="hover:text-neon transition">Home</a>
+                    <i class="fas fa-chevron-right text-[8px]"></i>
+                    <span class="text-neon">Products</span>
+                </nav>
+                <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 text-neon text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest mb-5">
+                    <i class="fas fa-th-large"></i> Shop by Category
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4">
+                    Find Your Perfect <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon via-tech to-clay">Rain Gear</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed font-normal mb-8">
+                    Browse our full collection of storm-tested umbrellas, raincoats, boots, and accessories — organized by category so you can gear up fast.
+                </p>
+
+                <!-- Hero Action Buttons -->
+                <div class="flex flex-wrap justify-center items-center gap-3.5 mt-8">
+                    <a href="#products-grid" class="btn-primary px-7 py-3 rounded-full text-sm font-bold inline-flex items-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
+                        <i class="fas fa-shopping-bag"></i> Shop All Gear
+                    </a>
+                    <a href="#collections" class="btn-outline text-neon px-7 py-3 rounded-full text-sm font-bold border-2 inline-flex items-center gap-2 hover:bg-tech hover:text-white transition-all duration-300">
+                        <i class="fas fa-layer-group"></i> Browse Categories
+                    </a>
+                    <a href="#featured-deal" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full text-sm font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105">
+                        <i class="fas fa-bolt text-thunder"></i> Editor's Pick
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED HERO PRODUCT BANNER ========== -->
+    <section id="featured-deal" class="py-12 bg-white dark:bg-[#0F172A] relative z-20">
+        <div class="container mx-auto px-6">
+            <div class="featured-banner p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 text-white relative z-10">
+                <div class="relative z-10 shrink-0">
+                    <span class="bg-thunder text-storm text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Editor's Pick</span>
+                    <div class="w-40 h-40 md:w-48 md:h-48 rounded-3xl overflow-hidden border-4 border-white/20 mt-4 shadow-2xl bg-white">
+                        <img src="images/product-stormguard.jpg" alt="StormGuard Pro umbrella" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+                <div class="relative z-10 text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-display font-bold mb-2">StormGuard Pro Umbrella</h2>
+                    <p class="text-gray-200 max-w-lg mb-4 leading-relaxed">Our best-selling 58" wind-resistant golf umbrella. Auto-open, fiberglass ribs, and StormShield™ Teflon coating. Survives 60 mph gusts.</p>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                        <span class="text-3xl font-bold text-neon">$49</span>
+                        <span class="text-sm line-through text-gray-400">$65</span>
+                        <span class="text-xs bg-white/20 px-2 py-1 rounded-full">Save 25%</span>
+                    </div>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3 mt-5">
+                        <a href="#" class="bg-white text-tech font-bold px-6 py-2.5 rounded-full text-sm hover:scale-105 transition shadow-lg inline-flex items-center gap-2">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </a>
+                        <a href="#" class="border-2 border-white text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-white hover:text-tech transition inline-flex items-center gap-2">
+                            <i class="fas fa-eye"></i> Quick View
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CATEGORY SPOTLIGHT STRIP ========== -->
+    <section id="collections" class="py-10 bg-cream/40 dark:bg-slate-800/20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                <a href="#products-grid" class="spotlight-tile h-32 md:h-40 block overflow-hidden group">
+                    <img src="images/cat-tile-umbrellas.jpg" alt="Umbrellas" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-storm/90 via-storm/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-4 right-4 z-10">
+                        <h3 class="text-white font-bold text-sm md:text-base">Umbrellas</h3>
+                        <p class="text-gray-300 text-[11px]">24 products</p>
+                    </div>
+                </a>
+                <a href="#products-grid" class="spotlight-tile h-32 md:h-40 block overflow-hidden group">
+                    <img src="images/cat-tile-raincoats.jpg" alt="Raincoats" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-storm/90 via-storm/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-4 right-4 z-10">
+                        <h3 class="text-white font-bold text-sm md:text-base">Raincoats</h3>
+                        <p class="text-gray-300 text-[11px]">18 products</p>
+                    </div>
+                </a>
+                <a href="#products-grid" class="spotlight-tile h-32 md:h-40 block overflow-hidden group">
+                    <img src="images/cat-tile-rainboots.jpg" alt="Rain Boots" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-storm/90 via-storm/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-4 right-4 z-10">
+                        <h3 class="text-white font-bold text-sm md:text-base">Rain Boots</h3>
+                        <p class="text-gray-300 text-[11px]">12 products</p>
+                    </div>
+                </a>
+                <a href="#products-grid" class="spotlight-tile h-32 md:h-40 block overflow-hidden group">
+                    <img src="images/cat-tile-accessories.jpg" alt="Accessories" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-storm/90 via-storm/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-4 right-4 z-10">
+                        <h3 class="text-white font-bold text-sm md:text-base">Accessories</h3>
+                        <p class="text-gray-300 text-[11px]">16 products</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MAIN PRODUCT SECTION: FILTER SIDEBAR + GRID ========== -->
+    <section id="products-grid" class="py-16 bg-white dark:bg-[#0F172A]">
+        <div class="container mx-auto px-6">
+            <!-- Category tabs + sort row -->
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5 mb-10">
+                <div class="flex flex-wrap gap-2.5">
+                    <button class="cat-tab active" data-cat="all">All Gear</button>
+                    <button class="cat-tab" data-cat="umbrellas">Umbrellas</button>
+                    <button class="cat-tab" data-cat="raincoats">Raincoats</button>
+                    <button class="cat-tab" data-cat="boots">Rain Boots</button>
+                    <button class="cat-tab" data-cat="accessories">Accessories</button>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button id="mobile-filter-btn" class="lg:hidden btn-outline px-4 py-2 text-xs font-semibold inline-flex items-center gap-2">
+                        <i class="fas fa-filter"></i> Filters
+                    </button>
+                    <label class="text-xs font-medium text-dusk dark:text-gray-400 hidden sm:block">Sort by:</label>
+                    <select class="sort-select">
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest Arrivals</option>
+                        <option>Best Rating</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-4 gap-8">
+                <!-- Sidebar filters -->
+                <aside class="lg:col-span-1">
+                    <div id="filter-panel" class="filter-panel">
+                        <div class="flex items-center justify-between mb-4 pb-3 border-b border-sand dark:border-slate-700/50">
+                            <h3 class="font-bold text-soil dark:text-white text-sm uppercase tracking-wider">Filters</h3>
+                            <button class="text-xs text-tech dark:text-neon font-semibold hover:underline">Reset</button>
+                        </div>
+                        <!-- Price -->
+                        <div class="mb-6">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-dusk dark:text-gray-400 mb-3">Price Range</h4>
+                            <div class="space-y-1">
+                                <label class="filter-check"><input type="checkbox"> Under $25</label>
+                                <label class="filter-check"><input type="checkbox"> $25 – $50</label>
+                                <label class="filter-check"><input type="checkbox"> $50 – $100</label>
+                                <label class="filter-check"><input type="checkbox"> $100+</label>
+                            </div>
+                        </div>
+                        <!-- Brand -->
+                        <div class="mb-6">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-dusk dark:text-gray-400 mb-3">Brand</h4>
+                            <div class="space-y-1">
+                                <label class="filter-check"><input type="checkbox"> RainGuard Pro</label>
+                                <label class="filter-check"><input type="checkbox"> StormShield™</label>
+                                <label class="filter-check"><input type="checkbox"> MudStomper</label>
+                                <label class="filter-check"><input type="checkbox"> AquaShield</label>
+                            </div>
+                        </div>
+                        <!-- Features -->
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-dusk dark:text-gray-400 mb-3">Features</h4>
+                            <div class="space-y-1">
+                                <label class="filter-check"><input type="checkbox"> Wind-Resistant</label>
+                                <label class="filter-check"><input type="checkbox"> Auto-Open</label>
+                                <label class="filter-check"><input type="checkbox"> Packable</label>
+                                <label class="filter-check"><input type="checkbox"> Reflective Trim</label>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Product grid -->
+                <div class="lg:col-span-3">
+                    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+
+                        <!-- Product 1 -->
+                        <div class="product-card" data-cat="umbrellas">
+                            <div class="relative h-52 overflow-hidden bg-cream/30 dark:bg-slate-800">
+                                <img src="images/product-stormguard.jpg" alt="StormGuard Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="product-tag bg-tech text-white">New</span>
+                                <div class="quick-actions">
+                                    <button class="quick-btn" title="Quick view"><i class="fas fa-eye"></i></button>
+                                    <button class="quick-btn" title="Add to wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="quick-btn" title="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-tech dark:text-neon">Umbrella</span>
+                                    <span class="text-[11px] text-dusk dark:text-gray-400 flex items-center gap-1"><i class="fas fa-star text-thunder text-[9px]"></i> 4.9</span>
+                                </div>
+                                <h3 class="font-bold text-soil dark:text-white mb-1">StormGuard Pro</h3>
+                                <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-3 flex-1">58" golf umbrella · wind-resistant · auto-open</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-tech dark:text-neon">$49</span>
+                                    <button class="btn-primary text-xs px-4 py-1.5 rounded-full font-semibold">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card" data-cat="raincoats">
+                            <div class="relative h-52 overflow-hidden bg-cream/30 dark:bg-slate-800">
+                                <img src="images/product-aquashield.jpg" alt="AquaShield Jacket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="product-tag bg-clay text-white">-20%</span>
+                                <div class="quick-actions">
+                                    <button class="quick-btn" title="Quick view"><i class="fas fa-eye"></i></button>
+                                    <button class="quick-btn" title="Add to wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="quick-btn" title="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-clay">Raincoat</span>
+                                    <span class="text-[11px] text-dusk dark:text-gray-400 flex items-center gap-1"><i class="fas fa-star text-thunder text-[9px]"></i> 4.8</span>
+                                </div>
+                                <h3 class="font-bold text-soil dark:text-white mb-1">AquaShield Jacket</h3>
+                                <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-3 flex-1">Waterproof · breathable · packable hooded jacket</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-clay">$79 <span class="text-xs line-through text-gray-400">$99</span></span>
+                                    <button class="btn-primary text-xs px-4 py-1.5 rounded-full font-semibold">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card" data-cat="boots">
+                            <div class="relative h-52 overflow-hidden bg-cream/30 dark:bg-slate-800">
+                                <img src="images/product-mudstomper.jpg" alt="MudStomper Boots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="product-tag bg-soil text-white">Bundle</span>
+                                <div class="quick-actions">
+                                    <button class="quick-btn" title="Quick view"><i class="fas fa-eye"></i></button>
+                                    <button class="quick-btn" title="Add to wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="quick-btn" title="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-soil dark:text-gray-300">Boots</span>
+                                    <span class="text-[11px] text-dusk dark:text-gray-400 flex items-center gap-1"><i class="fas fa-star text-thunder text-[9px]"></i> 4.7</span>
+                                </div>
+                                <h3 class="font-bold text-soil dark:text-white mb-1">MudStomper Boots + Socks</h3>
+                                <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-3 flex-1">100% waterproof rubber boots · thermal socks included</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-tech dark:text-neon">$59</span>
+                                    <button class="btn-primary text-xs px-4 py-1.5 rounded-full font-semibold">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card" data-cat="umbrellas">
+                            <div class="relative h-52 overflow-hidden bg-cream/30 dark:bg-slate-800">
+                                <img src="images/product-cityslim.jpg" alt="CitySlim Compact" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="quick-actions">
+                                    <button class="quick-btn" title="Quick view"><i class="fas fa-eye"></i></button>
+                                    <button class="quick-btn" title="Add to wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="quick-btn" title="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-tech dark:text-neon">Umbrella</span>
+                                    <span class="text-[11px] text-dusk dark:text-gray-400 flex items-center gap-1"><i class="fas fa-star text-thunder text-[9px]"></i> 4.6</span>
+                                </div>
+                                <h3 class="font-bold text-soil dark:text-white mb-1">CitySlim Compact</h3>
+                                <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-3 flex-1">Ultra-light travel umbrella · fits in any bag</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-tech dark:text-neon">$29</span>
+                                    <button class="btn-primary text-xs px-4 py-1.5 rounded-full font-semibold">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="product-card" data-cat="raincoats">
+                            <div class="relative h-52 overflow-hidden bg-cream/30 dark:bg-slate-800">
+                                <img src="images/product-trailshell.jpg" alt="TrailShell Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="product-tag bg-tech text-white">New</span>
+                                <div class="quick-actions">
+                                    <button class="quick-btn" title="Quick view"><i class="fas fa-eye"></i></button>
+                                    <button class="quick-btn" title="Add to wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="quick-btn" title="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-clay">Raincoat</span>
+                                    <span class="text-[11px] text-dusk dark:text-gray-400 flex items-center gap-1"><i class="fas fa-star text-thunder text-[9px]"></i> 4.9</span>
+                                </div>
+                                <h3 class="font-bold text-soil dark:text-white mb-1">TrailShell Pro</h3>
+                                <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-3 flex-1">3-layer waterproof shell · pit zips · helmet-compatible hood</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-tech dark:text-neon">$129</span>
+                                    <button class="btn-primary text-xs px-4 py-1.5 rounded-full font-semibold">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="product-card" data-cat="accessories">
+                            <div class="relative h-52 overflow-hidden bg-cream/30 dark:bg-slate-800">
+                                <img src="images/product-backpackcover.jpg" alt="DryBag Backpack Cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="quick-actions">
+                                    <button class="quick-btn" title="Quick view"><i class="fas fa-eye"></i></button>
+                                    <button class="quick-btn" title="Add to wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="quick-btn" title="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-soil dark:text-gray-300">Accessory</span>
+                                    <span class="text-[11px] text-dusk dark:text-gray-400 flex items-center gap-1"><i class="fas fa-star text-thunder text-[9px]"></i> 4.5</span>
+                                </div>
+                                <h3 class="font-bold text-soil dark:text-white mb-1">DryBag Backpack Cover</h3>
+                                <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-3 flex-1">Universal waterproof cover · reflective trim · packs small</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-tech dark:text-neon">$19</span>
+                                    <button class="btn-primary text-xs px-4 py-1.5 rounded-full font-semibold">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 7 -->
+                        <div class="product-card" data-cat="boots">
+                            <div class="relative h-52 overflow-hidden bg-cream/30 dark:bg-slate-800">
+                                <img src="images/product-kidsboots.jpg" alt="PuddleJumper Kids Boots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="product-tag bg-thunder text-storm">Kids</span>
+                                <div class="quick-actions">
+                                    <button class="quick-btn" title="Quick view"><i class="fas fa-eye"></i></button>
+                                    <button class="quick-btn" title="Add to wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="quick-btn" title="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-soil dark:text-gray-300">Boots</span>
+                                    <span class="text-[11px] text-dusk dark:text-gray-400 flex items-center gap-1"><i class="fas fa-star text-thunder text-[9px]"></i> 4.8</span>
+                                </div>
+                                <h3 class="font-bold text-soil dark:text-white mb-1">PuddleJumper Kids Boots</h3>
+                                <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-3 flex-1">Fun colorful waterproof boots · easy pull-on handles</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-tech dark:text-neon">$34</span>
+                                    <button class="btn-primary text-xs px-4 py-1.5 rounded-full font-semibold">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 8 -->
+                        <div class="product-card" data-cat="accessories">
+                            <div class="relative h-52 overflow-hidden bg-cream/30 dark:bg-slate-800">
+                                <img src="images/product-buckethat.jpg" alt="Storm Bucket Hat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="quick-actions">
+                                    <button class="quick-btn" title="Quick view"><i class="fas fa-eye"></i></button>
+                                    <button class="quick-btn" title="Add to wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="quick-btn" title="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-soil dark:text-gray-300">Accessory</span>
+                                    <span class="text-[11px] text-dusk dark:text-gray-400 flex items-center gap-1"><i class="fas fa-star text-thunder text-[9px]"></i> 4.4</span>
+                                </div>
+                                <h3 class="font-bold text-soil dark:text-white mb-1">Storm Bucket Hat</h3>
+                                <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-3 flex-1">Waterproof breathable bucket hat · wide brim · unisex</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-tech dark:text-neon">$24</span>
+                                    <button class="btn-primary text-xs px-4 py-1.5 rounded-full font-semibold">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 9 -->
+                        <div class="product-card" data-cat="umbrellas">
+                            <div class="relative h-52 overflow-hidden bg-cream/30 dark:bg-slate-800">
+                                <img src="images/product-reversible.jpg" alt="Reversible Storm Umbrella" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="product-tag bg-clay text-white">Sale</span>
+                                <div class="quick-actions">
+                                    <button class="quick-btn" title="Quick view"><i class="fas fa-eye"></i></button>
+                                    <button class="quick-btn" title="Add to wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="quick-btn" title="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col flex-1">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-tech dark:text-neon">Umbrella</span>
+                                    <span class="text-[11px] text-dusk dark:text-gray-400 flex items-center gap-1"><i class="fas fa-star text-thunder text-[9px]"></i> 4.7</span>
+                                </div>
+                                <h3 class="font-bold text-soil dark:text-white mb-1">Reversible Storm Umbrella</h3>
+                                <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-3 flex-1">Double-layer canopy · reverses in wind · C-handle</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-clay">$39 <span class="text-xs line-through text-gray-400">$55</span></span>
+                                    <button class="btn-primary text-xs px-4 py-1.5 rounded-full font-semibold">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Load more -->
+                    <div class="text-center mt-10">
+                        <button class="btn-outline px-8 py-3 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                            <i class="fas fa-sync-alt"></i> Load More Gear
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA BANNER ========== -->
+    <section class="py-16 bg-tech/5 dark:bg-slate-800/20">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="gear-card p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-tech/10 rounded-bl-full"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-neon/5 rounded-tr-full"></div>
+                <div class="relative z-10 text-center md:text-left">
+                    <span class="text-tech dark:text-neon font-semibold tracking-widest text-xs uppercase">Bulk Orders</span>
+                    <h2 class="text-2xl md:text-3xl font-display font-bold text-soil dark:text-white mt-1">Need Custom Branded Rain Gear?</h2>
+                    <p class="text-dusk dark:text-gray-300 mt-2 max-w-lg">We offer corporate branding on umbrellas, raincoats, and accessories. Bulk pricing available.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 relative z-10 shrink-0 justify-center">
+                    <a href="corporate.html" class="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                        <i class="fas fa-palette"></i> Get a Quote
+                    </a>
+                    <a href="contact.html" class="btn-outline px-6 py-2.5 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER – copied from reference ========== -->
+    <footer class="bg-white dark:bg-[#0F172A] text-soil dark:text-gray-300 pt-16 pb-8 border-t-4 border-tech transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="text-center md:text-left">
+                    <a href="index.html" class="inline-flex items-center justify-center md:justify-start gap-3 mb-6 group cursor-pointer">
+                        <div class="w-9 h-9 md:w-10 md:h-10 bg-tech rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-umbrella text-white text-base md:text-lg"></i>
+                        </div>
+                        <span class="text-lg md:text-2xl font-display font-bold tracking-tight text-soil dark:text-white group-hover:text-tech dark:group-hover:text-neon transition-colors duration-300">RainGuard</span>
+                    </a>
+                    <p class="text-sm text-dusk dark:text-gray-300 leading-relaxed mb-6">
+                        Durable rain gear, unbeatable prices, expert craftsmanship. Your one-stop shop for umbrellas, raincoats, and accessories.
+                    </p>
+                    <div class="flex justify-center md:justify-start gap-3">
+                        <a href="#" class="social-icon-tech"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-tech"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon-tech"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-tech dark:text-neon mb-5">Shop</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Umbrellas</a></li>
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Raincoats & Jackets</a></li>
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Rain Boots</a></li>
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Accessories</a></li>
+                        <li><a href="collections.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Collections</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-tech dark:text-neon mb-5">Support</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">About Us</a></li>
+                        <li><a href="corporate.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Corporate Branding</a></li>
+                        <li><a href="#" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Warranty & Returns</a></li>
+                        <li><a href="contact.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Contact Us</a></li>
+                        <li><a href="#" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">FAQs</a></li>
+                        <li><a href="#" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-tech dark:text-neon mb-5">Visit Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-map-marker-alt text-tech dark:text-neon"></i>
+                            <span>42 Storm Lane, Portland, OR 97205</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-phone text-tech dark:text-neon"></i>
+                            <span>(555) 234-RAIN</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-envelope text-tech dark:text-neon"></i>
+                            <span>hello@rainguard.com</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-clock text-tech dark:text-neon"></i>
+                            <span>Mon–Sat: 9am – 7pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-sand dark:border-slate-700/50 text-center text-sm text-dusk dark:text-gray-300">
+                <p>© 2026 RainGuard | Umbrella & Rain Gear Store. All rights reserved. <span class="text-tech dark:text-neon">☔ Stay dry, stay stylish.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme toggle
+            const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+            themeBtns.forEach(btn => {
+                btn?.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+                });
+            });
+            if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+            // RTL toggle
+            function setRTL(isRTL) {
+                const html = document.documentElement;
+                if (isRTL) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); }
+                else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+            }
+            const savedDir = localStorage.getItem('dir');
+            if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+            else document.documentElement.setAttribute('dir', 'ltr');
+
+            const rtlBtn = document.getElementById('rtl-toggle');
+            if (rtlBtn) {
+                rtlBtn.addEventListener('click', () => {
+                    const currentDir = document.documentElement.getAttribute('dir');
+                    setRTL(currentDir !== 'rtl');
+                });
+            }
+            const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+            if (mobileRtlBtn) {
+                mobileRtlBtn.addEventListener('click', () => {
+                    const currentDir = document.documentElement.getAttribute('dir');
+                    setRTL(currentDir !== 'rtl');
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const mobileToggle = document.getElementById('mobile-toggle');
+                    if (mobileMenu && mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                        if (mobileToggle && mobileToggle.querySelector('i')) {
+                            mobileToggle.querySelector('i').classList.remove('fa-times');
+                            mobileToggle.querySelector('i').classList.add('fa-bars');
+                        }
+                    }
+                });
+            }
+
+            // Mobile menu toggle
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileToggle && mobileMenu) {
+                mobileToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                    const icon = mobileToggle.querySelector('i');
+                    if (mobileMenu.classList.contains('open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+                mobileMenu.querySelectorAll('a:not(#mobile-rtl-toggle)').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('open');
+                        if (mobileToggle.querySelector('i')) {
+                            mobileToggle.querySelector('i').classList.remove('fa-times');
+                            mobileToggle.querySelector('i').classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // ---- Product page interactions ----
+
+            // Category tab filtering
+            const catTabs = document.querySelectorAll('.cat-tab');
+            const productCards = document.querySelectorAll('.product-card');
+            catTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    catTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    const cat = tab.dataset.cat;
+                    productCards.forEach(card => {
+                        if (cat === 'all' || card.dataset.cat === cat) {
+                            card.style.display = '';
+                            card.classList.add('animate-fade-in');
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Mobile filter drawer toggle
+            const filterBtn = document.getElementById('mobile-filter-btn');
+            const filterPanel = document.getElementById('filter-panel');
+            if (filterBtn && filterPanel) {
+                filterBtn.addEventListener('click', () => {
+                    filterPanel.classList.toggle('show-mobile');
+                    const isShown = filterPanel.classList.contains('show-mobile');
+                    filterBtn.innerHTML = isShown
+                        ? '<i class="fas fa-times"></i> Close Filters'
+                        : '<i class="fas fa-filter"></i> Filters';
+                });
+            }
+
+            // Wishlist quick action toggle
+            document.querySelectorAll('.quick-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const icon = btn.querySelector('i');
+                    if (icon.classList.contains('fa-heart') || icon.classList.contains('far')) {
+                        icon.classList.toggle('far');
+                        icon.classList.toggle('fas');
+                        icon.classList.toggle('text-red-500');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

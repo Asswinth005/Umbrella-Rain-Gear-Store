@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Branding | RainGuard · Custom Gear Program</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563EB'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12h20c0-5.52-4.48-10-10-10zm0 2c3.86 0 7.19 2.59 8.15 6H3.85C4.81 6.59 8.14 4 12 4zm-1 14h2v4h-2v-4z'/%3E%3C/svg%3E">
+
+    <script src="tailwind.js"></script>
+    <script>
+        if (typeof tailwind === 'undefined') {
+            document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        herb: '#4A7C59', clay: '#C27A4A', sand: '#E8DCC4', soil: '#5C4B3A',
+                        cream: '#F9F5ED', dusk: '#6D6875', tech: '#2563EB', techdark: '#1E3A8A',
+                        neon: '#22D3EE', slatebg: '#0F172A', rain: '#3B6E9A', mist: '#D4E3F0',
+                        storm: '#1E2F4A', cloud: '#F0F4F8', thunder: '#F5B041', bark: '#5C4B3A',
+                    },
+                    fontFamily: {
+                        'display': ['"Poppins"', 'system-ui', 'sans-serif'],
+                        'body': ['"Inter"', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float-slow': 'floatSlow 6s ease-in-out infinite',
+                        'spin-slow': 'spinSlow 12s linear infinite',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-gentle': 'bounceGentle 2.5s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                        'rain-drop': 'rainDrop 3s ease-in infinite',
+                    },
+                    keyframes: {
+                        floatSlow: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+                        spinSlow: { '0%': { transform: 'rotate(0deg)' }, '100%': { transform: 'rotate(360deg)' } },
+                        slideUp: { '0%': { transform: 'translateY(40px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        bounceGentle: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-5px)' } },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        pulseGlow: { '0%, 100%': { boxShadow: '0 0 5px rgba(34,211,238,0.3)' }, '50%': { boxShadow: '0 0 20px rgba(34,211,238,0.6)' } },
+                        rainDrop: { '0%': { transform: 'translateY(-10px)', opacity: '0' }, '20%': { opacity: '0.7' }, '80%': { opacity: '0.9' }, '100%': { transform: 'translateY(20px)', opacity: '0' } },
+                    },
+                    backgroundImage: {
+                        'rain-pattern': "radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 70%)",
+                        'umbrella-texture': "url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z%22 fill=%22rgba(37,99,235,0.03)%22/%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { background-color: #F9F5ED; color: #5C4B3A; font-family: 'Inter', system-ui, sans-serif; }
+        .dark body { background-color: #0B1120; color: #E2E8F0; }
+        .rain-pattern, .umbrella-texture, body.rain-pattern, body.umbrella-texture {
+            background-image: radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 70%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z' fill='rgba(37,99,235,0.03)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+        }
+        .dark .rain-pattern, .dark .umbrella-texture, .dark body.rain-pattern, .dark body.umbrella-texture {
+            background-image: radial-gradient(circle at 20% 30%, rgba(34, 211, 238, 0.04) 0%, transparent 70%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z' fill='rgba(34,211,238,0.02)'/%3E%3C/svg%3E");
+        }
+        .dark body > nav { background-color: rgba(15, 23, 42, 0.96) !important; border-color: rgba(37, 99, 235, 0.25) !important; }
+        .dark section.bg-white, .dark section[class*="bg-white"] { background-color: #0F172A !important; }
+        body::-webkit-scrollbar { width: 6px; }
+        body::-webkit-scrollbar-track { background: #E8DCC4; border-radius: 10px; }
+        body::-webkit-scrollbar-thumb { background: #2563EB; border-radius: 10px; }
+        .dark body::-webkit-scrollbar-track { background: #1E293B; }
+        .dark body::-webkit-scrollbar-thumb { background: #22D3EE; }
+
+        .gear-card { background: white; border-radius: 24px; transition: all 0.35s ease; border: 1px solid rgba(37, 99, 235, 0.12); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04); }
+        .dark .gear-card { background: #1E293B; border-color: rgba(34, 211, 238, 0.2); }
+        .gear-card:hover { transform: translateY(-6px); box-shadow: 0 20px 35px -12px rgba(37, 99, 235, 0.25); border-color: #2563EB; }
+        .dark .gear-card:hover { border-color: #22D3EE; }
+
+        .btn-primary { background-color: #2563EB; color: white; font-weight: 600; border-radius: 50px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35); }
+        .btn-primary:hover { background-color: #1D4ED8; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45); }
+        .btn-outline { border: 1.5px solid #2563EB; color: #2563EB; background: transparent; border-radius: 50px; font-weight: 500; transition: all 0.3s; }
+        .btn-outline:hover { background-color: #2563EB; color: white; transform: translateY(-2px); }
+        .dark .btn-outline { border-color: #22D3EE; color: #22D3EE; }
+        .dark .btn-outline:hover { background-color: #22D3EE; color: #0F172A; }
+        .btn-outline.text-neon { border-color: #22D3EE !important; color: #22D3EE !important; }
+        .btn-outline.text-neon:hover { background-color: #22D3EE !important; color: #0F172A !important; }
+
+        .nav-link { position: relative; font-weight: 500; }
+        .nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2.5px; background-color: #2563EB; transition: width 0.25s ease; border-radius: 3px; }
+        .dark .nav-link::after { background-color: #22D3EE; }
+        .nav-link:hover::after { width: 100%; }
+
+        .dropdown-tech { position: relative; }
+        .dropdown-tech-menu { position: absolute; top: 100%; left: 0; min-width: 210px; background: white; border-radius: 18px; padding: 0.6rem 0; box-shadow: 0 18px 32px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(12px); transition: all 0.25s ease; z-index: 1000; border: 1px solid rgba(37, 99, 235, 0.2); }
+        .dropdown-tech-menu::before { content: ''; position: absolute; top: -12px; left: 0; right: 0; height: 12px; }
+        .dark .dropdown-tech-menu { background: #1E293B; border-color: rgba(34, 211, 238, 0.3); }
+        .dropdown-tech:hover .dropdown-tech-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-item { display: flex; align-items: center; padding: 0.65rem 1.4rem; transition: all 0.2s; color: #5C4B3A; }
+        .dark .dropdown-item { color: #E2E8F0; }
+        .dropdown-item:hover { background-color: #F9F5ED; color: #2563EB; padding-left: 1.7rem; }
+        .dark .dropdown-item:hover { background-color: #0F172A; color: #22D3EE; }
+        .dropdown-item i { margin-right: 0.75rem; width: 20px; }
+
+        .mobile-menu-tech { background: white; max-height: 0; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 0 0 24px 24px; }
+        .dark .mobile-menu-tech { background: #0F172A; }
+        .mobile-menu-tech.open { max-height: 80vh; overflow-y: auto; scrollbar-width: none; }
+        .mobile-menu-tech.open::-webkit-scrollbar { display: none; }
+
+        .stat-badge { background: white; border-radius: 24px; padding: 1rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); border: 1px solid rgba(37, 99, 235, 0.15); }
+        .dark .stat-badge { background: #1E293B; border-color: rgba(34, 211, 238, 0.2); }
+
+        .testimonial-card { background: white; border-radius: 28px; padding: 1.8rem; border-left: 5px solid #2563EB; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05); }
+        .dark .testimonial-card { background: #1E293B; border-left-color: #22D3EE; }
+
+        .social-icon-tech { width: 38px; height: 38px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background-color: #F9F5ED; color: #2563EB; transition: all 0.3s; }
+        .social-icon-tech:hover { background-color: #2563EB; color: white; transform: translateY(-3px); }
+        .dark .social-icon-tech { background-color: #334155; color: #E2E8F0; }
+        .dark .social-icon-tech:hover { background-color: #22D3EE; color: #0F172A; }
+
+        [dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+        [dir="rtl"] .border-l-4 { border-left-width: 0 !important; border-right-width: 4px !important; }
+        [dir="rtl"] .ml-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+        html[dir="rtl"] .dropdown-tech-menu { left: auto; right: 0; }
+        html[dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
+        html[dir="rtl"] .dropdown-item:hover { padding-left: 1.4rem; padding-right: 1.7rem; }
+        html[dir="rtl"] .testimonial-card { border-left: none; border-right: 5px solid #2563EB; }
+        html[dir="rtl"].dark .testimonial-card, .dark html[dir="rtl"] .testimonial-card { border-right-color: #22D3EE; }
+        html[dir="rtl"] .text-left { text-align: right; }
+
+        .dark input, .dark select, .dark textarea { background-color: #0F172A !important; color: #FFFFFF !important; border-color: rgba(34, 211, 238, 0.3) !important; }
+        .dark input::placeholder, .dark textarea::placeholder { color: #94A3B8 !important; opacity: 1 !important; }
+        .dark select option { background-color: #1E293B !important; color: #FFFFFF !important; }
+        .dark label { color: #F1F5F9 !important; }
+
+        /* ========== CORPORATE BRANDING PAGE STYLES ========== */
+        .corp-hero-new {
+            background: radial-gradient(ellipse at top right, #1E3A5F 0%, #0A1628 55%);
+            position: relative;
+            overflow: hidden;
+        }
+        .corp-hero-new::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 70vw;
+            height: 70vw;
+            background: radial-gradient(circle, rgba(245,176,65,0.12) 0%, transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .corp-hero-new::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -15%;
+            width: 55vw;
+            height: 55vw;
+            background: radial-gradient(circle, rgba(37,99,235,0.22) 0%, transparent 65%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Customizer widget */
+        .customizer-shell {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid rgba(37, 99, 235, 0.12);
+            box-shadow: 0 24px 48px -16px rgba(37, 99, 235, 0.25);
+        }
+        .dark .customizer-shell { background: #1E293B; border-color: rgba(34, 211, 238, 0.15); }
+
+        .swatch-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            border: 3px solid transparent;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        .swatch-btn:hover { transform: scale(1.1); }
+        .swatch-btn.active { border-color: #2563EB; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2); }
+        .dark .swatch-btn.active { border-color: #22D3EE; box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2); }
+
+        .placement-option {
+            padding: 0.6rem 1rem;
+            border-radius: 12px;
+            border: 1.5px solid #E8DCC4;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #5C4B3A;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #FDFBF7;
+        }
+        .placement-option:hover { border-color: #2563EB; color: #2563EB; }
+        .placement-option.active { background: #2563EB; color: white; border-color: #2563EB; }
+        .dark .placement-option { background: #0F172A; border-color: #334155; color: #E2E8F0; }
+        .dark .placement-option:hover { border-color: #22D3EE; color: #22D3EE; }
+        .dark .placement-option.active { background: #22D3EE; color: #0F172A; border-color: #22D3EE; }
+
+        /* Stepper timeline */
+        .stepper-row {
+            position: relative;
+        }
+        .stepper-row::before {
+            content: '';
+            position: absolute;
+            top: 2.5rem;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, #2563EB, #22D3EE, #F5B041);
+            opacity: 0.35;
+            z-index: 0;
+        }
+        @media (max-width: 767px) { .stepper-row::before { display: none; } }
+        .stepper-node {
+            position: relative;
+            z-index: 2;
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem 1.25rem;
+            text-align: center;
+            border: 1px solid rgba(37, 99, 235, 0.12);
+            transition: all 0.3s ease;
+        }
+        .stepper-node:hover { transform: translateY(-6px); box-shadow: 0 16px 32px -12px rgba(37, 99, 235, 0.25); border-color: #2563EB; }
+        .dark .stepper-node { background: #1E293B; border-color: rgba(34, 211, 238, 0.15); }
+        .dark .stepper-node:hover { border-color: #22D3EE; }
+
+        .stepper-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin: 0 auto 0.9rem;
+            box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Case study spotlight */
+        .case-spotlight {
+            background: linear-gradient(135deg, #142844 0%, #1E3A5F 100%);
+            border-radius: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+        .case-spotlight::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245,176,65,0.18) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* Pricing */
+        .plan-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem 1.75rem;
+            border: 1.5px solid rgba(37, 99, 235, 0.12);
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .plan-card:hover { transform: translateY(-6px); box-shadow: 0 24px 44px -16px rgba(37, 99, 235, 0.25); }
+        .plan-card.plan-featured {
+            border-color: #F5B041;
+            box-shadow: 0 24px 48px -16px rgba(245, 176, 65, 0.35);
+        }
+        .plan-card.plan-featured::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #F5B041, #2563EB);
+        }
+        .dark .plan-card { background: #1E293B; border-color: rgba(34, 211, 238, 0.15); }
+        .dark .plan-card.plan-featured { border-color: #F5B041; }
+
+        .plan-feature { display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.35rem 0; font-size: 0.85rem; }
+
+        /* Logo wall */
+        .logo-tile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1.35rem 1rem;
+            border-radius: 16px;
+            background: white;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: #5C4B3A;
+            transition: all 0.3s ease;
+            filter: grayscale(0.7);
+            opacity: 0.8;
+        }
+        .logo-tile:hover { filter: grayscale(0); opacity: 1; transform: translateY(-3px); border-color: #2563EB; color: #2563EB; }
+        .dark .logo-tile { background: #1E293B; border-color: rgba(34, 211, 238, 0.12); color: #E2E8F0; }
+        .dark .logo-tile:hover { border-color: #22D3EE; color: #22D3EE; }
+
+        /* Form */
+        .form-input {
+            width: 100%;
+            border-radius: 14px;
+            border: 1.5px solid #E8DCC4;
+            padding: 0.8rem 1rem;
+            font-size: 0.9rem;
+            background: #FDFBF7;
+            color: #5C4B3A;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-input:focus { outline: none; border-color: #2563EB; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12); background: white; }
+        .dark .form-input { background: #0F172A; border-color: #334155; color: #FFFFFF; }
+        .dark .form-input:focus { border-color: #22D3EE; box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12); }
+
+        .inquiry-panel {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem;
+            border: 1px solid rgba(37, 99, 235, 0.12);
+            box-shadow: 0 12px 32px -8px rgba(37, 99, 235, 0.12);
+        }
+        .dark .inquiry-panel { background: #1E293B; border-color: rgba(34, 211, 238, 0.15); }
+
+        .upload-zone {
+            border: 2px dashed #C9BBA3;
+            border-radius: 16px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            background: #FDFBF7;
+        }
+        .upload-zone:hover { border-color: #2563EB; background: rgba(37, 99, 235, 0.04); }
+        .dark .upload-zone { border-color: #334155; background: #0F172A; }
+        .dark .upload-zone:hover { border-color: #22D3EE; background: rgba(34, 211, 238, 0.05); }
+
+        .accent-divider {
+            height: 4px;
+            width: 60px;
+            background: linear-gradient(90deg, #2563EB, #22D3EE);
+            border-radius: 4px;
+        }
+
+        .benefit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            background: rgba(37, 99, 235, 0.08);
+            color: #2563EB;
+            border: 1px solid rgba(37, 99, 235, 0.15);
+        }
+        .dark .benefit-badge { background: rgba(34, 211, 238, 0.1); color: #22D3EE; border-color: rgba(34, 211, 238, 0.2); }
+
+        .number-chip {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, #2563EB, #22D3EE);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body class="rain-pattern umbrella-texture">
+
+    <!-- ========== NAVIGATION – copied from reference ========== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#0F172A]/95 backdrop-blur-md border-b border-sand dark:border-slate-700/50 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-24 md:h-24 py-3 md:py-0">
+                <div class="flex items-center flex-1">
+                    <a class='flex items-center gap-2 md:gap-3 group shrink-0' href='index.html'>
+                        <div class="w-9 h-9 md:w-10 md:h-10 bg-tech rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition duration-300">
+                            <i class="fas fa-umbrella text-white text-base md:text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-lg md:text-2xl font-display font-bold tracking-tight text-soil dark:text-white">RainGuard</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center justify-center gap-4 xl:gap-8 shrink-0">
+                    <div class="dropdown-tech">
+                        <button class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition flex items-center gap-1 py-2 whitespace-nowrap text-sm xl:text-base">
+                            Home <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </button>
+                        <div class="dropdown-tech-menu">
+                            <a class="dropdown-item" href="index.html">Home 1</a>
+                            <a class="dropdown-item" href="home2.html">Home 2</a>
+                        </div>
+                    </div>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="about.html">About</a>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="products.html">Products</a>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="collections.html">Collections</a>
+                    <a class="nav-link text-tech dark:text-neon font-bold transition whitespace-nowrap text-sm xl:text-base" href="corporate.html">Corporate Branding</a>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="contact.html">Contact</a>
+                </div>
+
+                <div class="flex items-center justify-end flex-1 gap-3 lg:gap-4 shrink-0">
+                    <div class="hidden lg:flex items-center gap-4">
+                        <a href="contact.html" class="btn-primary h-10 px-5 text-sm font-semibold inline-flex items-center justify-center whitespace-nowrap">Enquire Now</a>
+                        <button id="theme-toggle" class="w-10 h-10 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon hover:scale-110 transition flex items-center justify-center">
+                            <i class="fas fa-moon dark:hidden text-tech"></i>
+                            <i class="fas fa-sun hidden dark:inline text-amber-300"></i>
+                        </button>
+                        <button id="rtl-toggle" class="w-10 h-10 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon hover:scale-110 transition flex items-center justify-center font-bold text-base" title="Toggle RTL/LTR">⇄</button>
+                    </div>
+
+                    <button id="mobile-toggle" class="lg:hidden w-10 h-10 rounded-full bg-tech text-white flex items-center justify-center shadow-md">
+                        <i class="fas fa-bars text-base"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-tech lg:hidden">
+                <div class="py-4 px-3 space-y-1">
+                    <div class="py-1">
+                        <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition cursor-pointer">
+                            <span class="flex items-center gap-2"><i class="fas fa-home text-sm"></i> Home</span>
+                            <i id="home-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300"></i>
+                        </button>
+                        <div id="home-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+                            <a class="block py-2.5 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="index.html">
+                                <i class="far fa-circle mr-2 text-xs"></i> Home 1
+                            </a>
+                            <a class="block py-2.5 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="home2.html">
+                                <i class="far fa-circle mr-2 text-xs"></i> Home 2
+                            </a>
+                        </div>
+                    </div>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="about.html">About</a>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="products.html">Products</a>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="collections.html">Collections</a>
+                    <a class="block py-3 px-4 font-medium text-tech dark:text-neon bg-tech/5 border-l-4 border-tech rounded-xl transition" href="corporate.html">Corporate Branding</a>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="contact.html">Contact</a>
+                    <div class="flex flex-col gap-3 pt-5 mt-3 border-t border-sand dark:border-slate-700/50">
+                        <a class="text-center btn-primary py-2.5 rounded-full font-semibold" href="contact.html">Enquire Now</a>
+                        <div class="flex gap-3">
+                            <button id="mobile-theme-toggle" class="flex-1 py-2 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon text-sm font-medium flex items-center gap-2 justify-center">
+                                <i class="fas fa-moon dark:hidden text-tech"></i><i class="fas fa-sun hidden dark:inline text-amber-300"></i>
+                                Theme
+                            </button>
+                            <button id="mobile-rtl-toggle" class="flex-1 py-2 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon text-sm font-medium flex items-center gap-2 justify-center">
+                                ⇄ RTL Mode
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== CORPORATE HERO ========== -->
+    <section class="corp-hero-new pt-32 pb-20 text-white relative overflow-hidden bg-[#0F172A]">
+        <!-- Site-related Hero Background Image & Gradient Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/corporate-hero-city.jpg" alt="Rainy corporate metropolis cityscape" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0F172A]/85 via-[#0F172A]/75 to-[#0F172A]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center animate-slide-up">
+                <nav class="flex items-center justify-center gap-2 text-xs font-medium text-gray-400 mb-5">
+                    <a href="index.html" class="hover:text-neon transition">Home</a>
+                    <i class="fas fa-chevron-right text-[8px]"></i>
+                    <span class="text-neon">Corporate Branding</span>
+                </nav>
+                <span class="inline-flex items-center gap-2 bg-thunder/15 border border-thunder/30 text-thunder text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">
+                    <i class="fas fa-briefcase"></i> Branded Rain Gear Program
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
+                    Turn Every Rainy Day <br class="hidden sm:inline">
+                    Into a <span class="text-transparent bg-clip-text bg-gradient-to-r from-thunder via-neon to-tech">Brand Moment.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed mb-8 font-normal">
+                    Premium custom umbrellas, raincoats, and accessories with your logo — designed for events, employee gifting, retail, and client appreciation. From 50 to 50,000 units.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <a href="#customizer" class="btn-primary px-8 py-3.5 rounded-full inline-flex items-center gap-2 text-base font-bold shadow-xl">
+                        <i class="fas fa-wand-magic-sparkles"></i> Try the Customizer
+                    </a>
+                    <a href="#quote" class="btn-outline text-neon px-8 py-3.5 rounded-full inline-flex items-center gap-2 text-base font-bold border-2 hover:bg-tech hover:text-white transition-all duration-300">
+                        <i class="fas fa-file-invoice-dollar"></i> Get a Quote
+                    </a>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-sm text-gray-300">
+                    <div class="flex items-center gap-2"><i class="fas fa-circle-check text-thunder"></i><span>MOQ from 50 units</span></div>
+                    <div class="flex items-center gap-2"><i class="fas fa-circle-check text-thunder"></i><span>Free digital mockups</span></div>
+                    <div class="flex items-center gap-2"><i class="fas fa-circle-check text-thunder"></i><span>Dedicated account manager</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== VALUE STRIP ========== -->
+    <section class="py-10 bg-white dark:bg-[#0F172A] relative z-20 border-b border-sand dark:border-slate-700/40">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div class="number-chip">500+</div>
+                    <div class="text-xs uppercase tracking-wider font-semibold text-dusk dark:text-gray-400 mt-1">Brands Served</div>
+                </div>
+                <div class="text-center">
+                    <div class="number-chip">1.2M</div>
+                    <div class="text-xs uppercase tracking-wider font-semibold text-dusk dark:text-gray-400 mt-1">Units Printed</div>
+                </div>
+                <div class="text-center">
+                    <div class="number-chip">98%</div>
+                    <div class="text-xs uppercase tracking-wider font-semibold text-dusk dark:text-gray-400 mt-1">Reorder Rate</div>
+                </div>
+                <div class="text-center">
+                    <div class="number-chip">4.9★</div>
+                    <div class="text-xs uppercase tracking-wider font-semibold text-dusk dark:text-gray-400 mt-1">Client Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INTERACTIVE CUSTOMIZER ========== -->
+    <section id="customizer" class="py-20 bg-cream/40 dark:bg-slate-800/20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-tech dark:text-neon font-semibold tracking-wider text-sm uppercase bg-white/60 dark:bg-slate-800/60 px-5 py-1.5 rounded-full inline-block">🎨 Live Preview</span>
+                <h2 class="text-3xl md:text-4xl font-display font-bold mt-4 text-soil dark:text-white">Build Your <span class="text-tech dark:text-neon">Branded Gear</span></h2>
+                <p class="text-dusk dark:text-gray-300 max-w-xl mx-auto mt-3">Pick a product, choose a color, and select your logo placement — see it update in real time.</p>
+            </div>
+
+            <div class="customizer-shell max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2">
+                    <!-- Preview -->
+                    <div class="relative bg-gradient-to-br from-cream/60 to-sand/40 dark:from-slate-900 dark:to-slate-800 p-6 md:p-8 flex items-center justify-center min-h-[380px]">
+                        <div class="absolute top-4 left-4 bg-white dark:bg-slate-800 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-tech dark:text-neon shadow-md border border-tech/15">
+                            <i class="fas fa-eye mr-1"></i> Live Preview
+                        </div>
+                        <div id="preview-canvas" class="relative w-full max-w-xs">
+                            <!-- Product image -->
+                            <div class="rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 bg-white dark:bg-slate-900 border border-sand dark:border-slate-700/50" id="product-shell">
+                                <img id="preview-img" src="images/corp-mockup-umbrella.jpg" alt="Customizer preview" class="w-full h-64 object-cover transition-all duration-500">
+                            </div>
+                            <!-- Logo placement overlay -->
+                            <div id="logo-overlay" class="absolute flex items-center justify-center bg-white/90 dark:bg-slate-800/90 border-2 border-dashed border-tech dark:border-neon rounded-lg shadow-lg transition-all duration-500" style="top: 55%; left: 50%; transform: translate(-50%, -50%); width: 88px; height: 40px;">
+                                <span class="text-[9px] font-bold uppercase tracking-wider text-tech dark:text-neon">YOUR LOGO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="p-6 md:p-8">
+                        <div class="mb-5">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-dusk dark:text-gray-400 mb-2">1. Choose Product</label>
+                            <div class="grid grid-cols-2 gap-2" id="product-options">
+                                <button type="button" class="placement-option active" data-product="umbrella" data-img="images/corp-mockup-umbrella.jpg">
+                                    <i class="fas fa-umbrella mr-1"></i> Umbrella
+                                </button>
+                                <button type="button" class="placement-option" data-product="jacket" data-img="images/jacket.jpg">
+                                    <i class="fas fa-vest mr-1"></i> Jacket
+                                </button>
+                                <button type="button" class="placement-option" data-product="boots" data-img="images/boots.png">
+                                    <i class="fas fa-shoe-prints mr-1"></i> Boots
+                                </button>
+                                <button type="button" class="placement-option" data-product="tote" data-img="images/bag.jpg">
+                                    <i class="fas fa-bag-shopping mr-1"></i> Dry Bag
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-dusk dark:text-gray-400 mb-2">2. Brand Color</label>
+                            <div class="flex flex-wrap gap-2.5" id="color-options">
+                                <button type="button" class="swatch-btn active" style="background:#2563EB" data-color="#2563EB" title="Tech Blue"></button>
+                                <button type="button" class="swatch-btn" style="background:#1E3A8A" data-color="#1E3A8A" title="Navy"></button>
+                                <button type="button" class="swatch-btn" style="background:#F5B041" data-color="#F5B041" title="Thunder Gold"></button>
+                                <button type="button" class="swatch-btn" style="background:#22D3EE" data-color="#22D3EE" title="Neon Cyan"></button>
+                                <button type="button" class="swatch-btn" style="background:#4A7C59" data-color="#4A7C59" title="Forest"></button>
+                                <button type="button" class="swatch-btn" style="background:#C27A4A" data-color="#C27A4A" title="Clay"></button>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-dusk dark:text-gray-400 mb-2">3. Logo Placement</label>
+                            <div class="grid grid-cols-3 gap-2" id="placement-options">
+                                <button type="button" class="placement-option active" data-pos="center" data-top="55%" data-left="50%" data-w="88px" data-h="40px">Center</button>
+                                <button type="button" class="placement-option" data-pos="bottom-right" data-top="72%" data-left="70%" data-w="60px" data-h="28px">Lower</button>
+                                <button type="button" class="placement-option" data-pos="top-left" data-top="28%" data-left="32%" data-w="60px" data-h="28px">Upper</button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-sand dark:border-slate-700/60">
+                            <div>
+                                <div class="text-[10px] uppercase tracking-wider text-dusk dark:text-gray-400 font-semibold">Est. price / unit</div>
+                                <div class="text-2xl font-display font-bold text-tech dark:text-neon">$14.50</div>
+                            </div>
+                            <a href="#quote" class="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                                <i class="fas fa-arrow-right"></i> Get Mockup
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROCESS STEPPER ========== -->
+    <section class="py-24 bg-[#F8FAFC]/70 dark:bg-[#0B1120] relative overflow-hidden border-y border-slate-100 dark:border-slate-800/60">
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 border border-blue-100 dark:border-blue-900/40 shadow-sm text-xs font-bold tracking-wider text-tech dark:text-neon uppercase mb-4">
+                    <i class="fas fa-gear text-tech dark:text-neon text-xs"></i>
+                    <span>THE PROCESS</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-soil dark:text-white tracking-tight leading-tight">
+                    From Brief to <span class="text-tech dark:text-neon">Branded Gear</span>
+                </h2>
+                <p class="text-dusk dark:text-gray-300 max-w-xl mx-auto mt-4 text-sm md:text-base leading-relaxed">
+                    A streamlined 4-step process with a dedicated account manager at every stage.
+                </p>
+            </div>
+
+            <!-- 4 Step Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto pt-4">
+                <!-- Step 1 -->
+                <div class="relative bg-white dark:bg-slate-800/90 rounded-[24px] p-7 pt-9 border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col text-left rtl:text-right group">
+                    <div class="absolute -top-3.5 left-7 rtl:left-auto rtl:right-7 w-8 h-8 rounded-full bg-tech text-white font-bold text-xs flex items-center justify-center shadow-md shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                        1
+                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-tech dark:text-neon text-lg mb-6">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-soil dark:text-white mb-2.5 font-display">Share Your Brief</h3>
+                    <p class="text-xs md:text-sm text-dusk dark:text-gray-300 leading-relaxed">
+                        Tell us your budget, quantity, product type, and timeline. We'll suggest the best options for your brand.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative bg-white dark:bg-slate-800/90 rounded-[24px] p-7 pt-9 border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col text-left rtl:text-right group">
+                    <div class="absolute -top-3.5 left-7 rtl:left-auto rtl:right-7 w-8 h-8 rounded-full bg-tech text-white font-bold text-xs flex items-center justify-center shadow-md shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                        2
+                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-[#FFF3EB] dark:bg-amber-950/40 flex items-center justify-center text-[#C27A4A] dark:text-[#E2A676] text-lg mb-6">
+                        <i class="fas fa-pen-ruler"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-soil dark:text-white mb-2.5 font-display">Free Mockup</h3>
+                    <p class="text-xs md:text-sm text-dusk dark:text-gray-300 leading-relaxed">
+                        Our design team creates a free digital mockup of your logo on the chosen products. Revisions included.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative bg-white dark:bg-slate-800/90 rounded-[24px] p-7 pt-9 border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col text-left rtl:text-right group">
+                    <div class="absolute -top-3.5 left-7 rtl:left-auto rtl:right-7 w-8 h-8 rounded-full bg-tech text-white font-bold text-xs flex items-center justify-center shadow-md shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                        3
+                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-[#FFF9EC] dark:bg-amber-950/30 flex items-center justify-center text-[#F5B041] dark:text-amber-300 text-lg mb-6">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-soil dark:text-white mb-2.5 font-display">Approve & Produce</h3>
+                    <p class="text-xs md:text-sm text-dusk dark:text-gray-300 leading-relaxed">
+                        Once approved, production begins. We send a sample for final sign-off before the full run.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative bg-white dark:bg-slate-800/90 rounded-[24px] p-7 pt-9 border border-slate-100 dark:border-slate-700/60 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col text-left rtl:text-right group">
+                    <div class="absolute -top-3.5 left-7 rtl:left-auto rtl:right-7 w-8 h-8 rounded-full bg-tech text-white font-bold text-xs flex items-center justify-center shadow-md shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                        4
+                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-tech dark:text-neon text-lg mb-6">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-soil dark:text-white mb-2.5 font-display">Delivered to You</h3>
+                    <p class="text-xs md:text-sm text-dusk dark:text-gray-300 leading-relaxed">
+                        We ship directly to your office or event venue, with tracking and a dedicated delivery coordinator.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CASE STUDY SPOTLIGHT ========== -->
+    <section class="py-20 bg-cream/40 dark:bg-slate-800/20">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="case-spotlight p-8 md:p-12 text-white relative z-10">
+                <div class="grid lg:grid-cols-2 gap-10 items-center relative z-10">
+                    <div>
+                        <span class="inline-flex items-center gap-2 bg-thunder/20 border border-thunder/30 text-thunder text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest mb-5">
+                            <i class="fas fa-star"></i> Case Study
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-display font-bold mb-4 leading-tight">3,000 Custom Umbrellas for a Global Tech Summit</h2>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            When TechCon Global needed branded umbrellas for 3,000 attendees across three rainy cities, they came to RainGuard. We designed a full-color canopy with reflective trim, custom packaging, and a QR code linking to their event app — delivered in under 10 days.
+                        </p>
+                        <div class="grid grid-cols-3 gap-4 mb-6">
+                            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 text-center border border-white/10">
+                                <div class="text-xl font-bold text-thunder">3,000</div>
+                                <div class="text-[10px] uppercase tracking-wider text-gray-300">Units</div>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 text-center border border-white/10">
+                                <div class="text-xl font-bold text-thunder">9</div>
+                                <div class="text-[10px] uppercase tracking-wider text-gray-300">Days</div>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 text-center border border-white/10">
+                                <div class="text-xl font-bold text-thunder">100%</div>
+                                <div class="text-[10px] uppercase tracking-wider text-gray-300">On Time</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <img src="images/avatar-david.jpg" alt="Marcus Thompson" class="w-11 h-11 rounded-full object-cover object-top border-2 border-thunder/40">
+                            <div>
+                                <div class="font-bold text-sm">Marcus Thompson</div>
+                                <div class="text-xs text-gray-400">Head of Events, TechCon Global</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl">
+                            <img src="/images/coll.jpg" alt="Custom branded umbrellas for TechCon" class="w-full h-72 object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 bg-thunder text-storm rounded-xl px-4 py-2.5 shadow-xl">
+                            <div class="text-[10px] uppercase tracking-wider font-bold">Featured Project</div>
+                            <div class="text-sm font-extrabold">TechCon Global · 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCTS AVAILABLE FOR BRANDING ========== -->
+    <section class="py-20 bg-white dark:bg-[#0F172A]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-tech dark:text-neon font-semibold tracking-wider text-sm uppercase bg-cream/60 dark:bg-slate-800/60 px-5 py-1.5 rounded-full inline-block">📦 Brandable Range</span>
+                <h2 class="text-3xl md:text-4xl font-display font-bold mt-4 text-soil dark:text-white">What You Can <span class="text-tech dark:text-neon">Customize</span></h2>
+                <p class="text-dusk dark:text-gray-300 max-w-xl mx-auto mt-3">Print, embroider, or deboss your logo on any of these products.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Product 1 -->
+                <div class="gear-card overflow-hidden flex flex-col">
+                    <div class="relative h-44 overflow-hidden">
+                        <img src="images/brandable-umbrella.jpg" alt="Branded umbrellas" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-tech text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full">Top Pick</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <h3 class="font-bold text-soil dark:text-white mb-1">Umbrellas</h3>
+                        <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-4 flex-1">Compact, golf, and auto-open. Full-color canopy printing available.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-sand dark:border-slate-700/50">
+                            <span class="text-xs font-bold text-tech dark:text-neon">From $12/unit</span>
+                            <span class="text-[10px] text-dusk dark:text-gray-400">MOQ 50</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="gear-card overflow-hidden flex flex-col">
+                    <div class="relative h-44 overflow-hidden">
+                        <img src="images/brandable-jacket.jpg" alt="Branded jackets" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <h3 class="font-bold text-soil dark:text-white mb-1">Rain Jackets</h3>
+                        <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-4 flex-1">Embroidered or printed logos. Custom interior labels and hang tags.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-sand dark:border-slate-700/50">
+                            <span class="text-xs font-bold text-tech dark:text-neon">From $28/unit</span>
+                            <span class="text-[10px] text-dusk dark:text-gray-400">MOQ 50</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="gear-card overflow-hidden flex flex-col">
+                    <div class="relative h-44 overflow-hidden">
+                        <img src="images/brandable-boots.jpg" alt="Branded boots" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <h3 class="font-bold text-soil dark:text-white mb-1">Rain Boots</h3>
+                        <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-4 flex-1">Debossed logo on the shaft or custom-printed insoles and packaging.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-sand dark:border-slate-700/50">
+                            <span class="text-xs font-bold text-tech dark:text-neon">From $22/unit</span>
+                            <span class="text-[10px] text-dusk dark:text-gray-400">MOQ 50</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="gear-card overflow-hidden flex flex-col">
+                    <div class="relative h-44 overflow-hidden">
+                        <img src="images/brandable-accessories.jpg" alt="Branded accessories" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <h3 class="font-bold text-soil dark:text-white mb-1">Accessories</h3>
+                        <p class="text-dusk dark:text-gray-300 text-xs leading-relaxed mb-4 flex-1">Bag covers, rain hats, dry bags — all brandable with your logo.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-sand dark:border-slate-700/50">
+                            <span class="text-xs font-bold text-tech dark:text-neon">From $8/unit</span>
+                            <span class="text-[10px] text-dusk dark:text-gray-400">MOQ 100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Branding methods -->
+            <div class="mt-12 flex flex-wrap justify-center gap-3">
+                <span class="benefit-badge"><i class="fas fa-print"></i> Screen Printing</span>
+                <span class="benefit-badge"><i class="fas fa-palette"></i> Full-Color Digital</span>
+                <span class="benefit-badge"><i class="fas fa-shoe-prints"></i> Embroidery</span>
+                <span class="benefit-badge"><i class="fas fa-stamp"></i> Debossing</span>
+                <span class="benefit-badge"><i class="fas fa-tags"></i> Custom Labels</span>
+                <span class="benefit-badge"><i class="fas fa-box"></i> Bespoke Packaging</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRICING TIERS ========== -->
+    <section class="py-20 bg-cream/40 dark:bg-slate-800/20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-14">
+                <span class="text-tech dark:text-neon font-semibold tracking-wider text-sm uppercase bg-white/60 dark:bg-slate-800/60 px-5 py-1.5 rounded-full inline-block">💵 Transparent Pricing</span>
+                <h2 class="text-3xl md:text-4xl font-display font-bold mt-4 text-soil dark:text-white">Program <span class="text-tech dark:text-neon">Tiers</span></h2>
+                <p class="text-dusk dark:text-gray-300 max-w-xl mx-auto mt-3">Volume-based pricing that scales with your order. All tiers include free digital mockups.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
+                <!-- Starter -->
+                <div class="plan-card">
+                    <span class="text-xs font-bold uppercase tracking-widest text-tech dark:text-neon">Starter</span>
+                    <div class="text-3xl font-display font-bold text-soil dark:text-white mt-2 mb-1">50–199</div>
+                    <div class="text-xs text-dusk dark:text-gray-400 mb-4">units</div>
+                    <p class="text-dusk dark:text-gray-300 text-sm mb-6">Perfect for small teams, events, and client gifts.</p>
+                    <ul class="space-y-1 mb-6 flex-1">
+                        <li class="plan-feature"><i class="fas fa-check text-tech dark:text-neon mt-1"></i><span class="text-dusk dark:text-gray-300">Free digital mockup</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-tech dark:text-neon mt-1"></i><span class="text-dusk dark:text-gray-300">1 logo placement</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-tech dark:text-neon mt-1"></i><span class="text-dusk dark:text-gray-300">Standard shipping</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-tech dark:text-neon mt-1"></i><span class="text-dusk dark:text-gray-300">7–10 day turnaround</span></li>
+                        <li class="plan-feature"><i class="fas fa-xmark text-gray-300 dark:text-gray-600 mt-1"></i><span class="text-dusk dark:text-gray-400">Dedicated manager</span></li>
+                    </ul>
+                    <a href="#quote" class="btn-outline w-full py-2.5 text-center text-sm font-semibold block mt-auto">Request Quote</a>
+                </div>
+                <!-- Growth (featured) -->
+                <div class="plan-card plan-featured">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="text-xs font-bold uppercase tracking-widest text-thunder">Growth</span>
+                        <span class="bg-thunder text-storm text-[10px] font-bold uppercase px-2.5 py-1 rounded-full">Most Chosen</span>
+                    </div>
+                    <div class="text-3xl font-display font-bold text-soil dark:text-white mt-1 mb-1">200–999</div>
+                    <div class="text-xs text-dusk dark:text-gray-400 mb-4">units</div>
+                    <p class="text-dusk dark:text-gray-300 text-sm mb-6">Ideal for company-wide gifting and trade show giveaways.</p>
+                    <ul class="space-y-1 mb-6 flex-1">
+                        <li class="plan-feature"><i class="fas fa-check text-thunder mt-1"></i><span class="text-dusk dark:text-gray-300">Free mockup + revisions</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-thunder mt-1"></i><span class="text-dusk dark:text-gray-300">Up to 3 logo placements</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-thunder mt-1"></i><span class="text-dusk dark:text-gray-300">Express shipping</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-thunder mt-1"></i><span class="text-dusk dark:text-gray-300">5–7 day turnaround</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-thunder mt-1"></i><span class="text-dusk dark:text-gray-300">Dedicated manager</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-thunder mt-1"></i><span class="text-dusk dark:text-gray-300">Custom packaging available</span></li>
+                    </ul>
+                    <a href="#quote" class="btn-primary w-full py-2.5 text-center text-sm font-semibold block mt-auto">Request Quote</a>
+                </div>
+                <!-- Enterprise -->
+                <div class="plan-card">
+                    <span class="text-xs font-bold uppercase tracking-widest text-tech dark:text-neon">Enterprise</span>
+                    <div class="text-3xl font-display font-bold text-soil dark:text-white mt-2 mb-1">1,000+</div>
+                    <div class="text-xs text-dusk dark:text-gray-400 mb-4">units</div>
+                    <p class="text-dusk dark:text-gray-300 text-sm mb-6">For large-scale events, retail, and global rollouts.</p>
+                    <ul class="space-y-1 mb-6 flex-1">
+                        <li class="plan-feature"><i class="fas fa-check text-tech dark:text-neon mt-1"></i><span class="text-dusk dark:text-gray-300">Fully bespoke design service</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-tech dark:text-neon mt-1"></i><span class="text-dusk dark:text-gray-300">Unlimited logo placements</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-tech dark:text-neon mt-1"></i><span class="text-dusk dark:text-gray-300">Global shipping included</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-tech dark:text-neon mt-1"></i><span class="text-dusk dark:text-gray-300">Priority 3–5 day production</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-tech dark:text-neon mt-1"></i><span class="text-dusk dark:text-gray-300">Dedicated account team</span></li>
+                        <li class="plan-feature"><i class="fas fa-check text-tech dark:text-neon mt-1"></i><span class="text-dusk dark:text-gray-300">Custom product development</span></li>
+                    </ul>
+                    <a href="#quote" class="btn-outline w-full py-2.5 text-center text-sm font-semibold block mt-auto">Request Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOGO WALL ========== -->
+    <section class="py-16 bg-white dark:bg-[#0F172A]">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-xs uppercase tracking-widest font-semibold text-dusk dark:text-gray-400 mb-8">Trusted by forward-thinking brands</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+                <div class="logo-tile"><i class="fas fa-mountain text-tech dark:text-neon"></i> ALPINE CO.</div>
+                <div class="logo-tile"><i class="fas fa-tree text-tech dark:text-neon"></i> NORTHWOOD</div>
+                <div class="logo-tile"><i class="fas fa-water text-tech dark:text-neon"></i> RIVER & RAIN</div>
+                <div class="logo-tile"><i class="fas fa-city text-tech dark:text-neon"></i> URBAN DRY</div>
+                <div class="logo-tile"><i class="fas fa-cloud-showers-heavy text-tech dark:text-neon"></i> STORMWEAR</div>
+                <div class="logo-tile"><i class="fas fa-leaf text-tech dark:text-neon"></i> GREENTRAIL</div>
+                <div class="logo-tile"><i class="fas fa-compass text-tech dark:text-neon"></i> WAYFINDER</div>
+                <div class="logo-tile"><i class="fas fa-snowflake text-tech dark:text-neon"></i> POLAR PEAK</div>
+                <div class="logo-tile"><i class="fas fa-sailboat text-tech dark:text-neon"></i> HARBORLINE</div>
+                <div class="logo-tile"><i class="fas fa-bicycle text-tech dark:text-neon"></i> CYCLEWORKS</div>
+                <div class="logo-tile"><i class="fas fa-dumbbell text-tech dark:text-neon"></i> IRONCLAD</div>
+                <div class="logo-tile"><i class="fas fa-graduation-cap text-tech dark:text-neon"></i> CAMPUS CO.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INQUIRY FORM ========== -->
+    <section id="quote" class="py-20 bg-tech/5 dark:bg-slate-800/20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-5 gap-10 max-w-6xl mx-auto">
+                <!-- Left: pitch -->
+                <div class="lg:col-span-2">
+                    <span class="text-tech dark:text-neon font-semibold tracking-widest text-xs uppercase">Start Here</span>
+                    <div class="accent-divider my-4"></div>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-soil dark:text-white leading-tight mb-4">Get Your Free <span class="text-tech dark:text-neon">Mockup & Quote</span></h2>
+                    <p class="text-dusk dark:text-gray-300 leading-relaxed mb-8">Fill out the form and our corporate team will respond within one business day with pricing and a free digital mockup — no commitment required.</p>
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-tech/10 dark:bg-tech/20 flex items-center justify-center shrink-0">
+                                <i class="fas fa-bolt text-tech dark:text-neon"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-soil dark:text-white text-sm">24-Hour Response</h4>
+                                <p class="text-dusk dark:text-gray-300 text-sm">Quotes within 24 hours, mockups within 48 hours.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-clay/10 flex items-center justify-center shrink-0">
+                                <i class="fas fa-user-tie text-clay"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-soil dark:text-white text-sm">Dedicated Manager</h4>
+                                <p class="text-dusk dark:text-gray-300 text-sm">One point of contact from brief to delivery.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-thunder/10 flex items-center justify-center shrink-0">
+                                <i class="fas fa-award text-thunder"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-soil dark:text-white text-sm">Quality Guarantee</h4>
+                                <p class="text-dusk dark:text-gray-300 text-sm">Free reprints if your logo doesn't meet our standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-5 bg-white dark:bg-slate-800 rounded-2xl border border-sand dark:border-slate-700">
+                        <p class="text-xs uppercase tracking-wider font-semibold text-dusk dark:text-gray-400 mb-2">Prefer to talk?</p>
+                        <a href="tel:+15552347246" class="flex items-center gap-2 text-soil dark:text-white font-bold hover:text-tech dark:hover:text-neon transition">
+                            <i class="fas fa-phone text-tech dark:text-neon"></i> (555) 234-RAIN
+                        </a>
+                        <a href="mailto:corporate@rainguard.com" class="flex items-center gap-2 text-soil dark:text-white font-bold hover:text-tech dark:hover:text-neon transition mt-2">
+                            <i class="fas fa-envelope text-tech dark:text-neon"></i> corporate@rainguard.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: form -->
+                <div class="lg:col-span-3">
+                    <div class="inquiry-panel">
+                        <h3 class="font-bold text-xl text-soil dark:text-white mb-1">Corporate Quote Request</h3>
+                        <p class="text-dusk dark:text-gray-300 text-sm mb-6">All fields marked * are required.</p>
+                        <form class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Full Name *</label>
+                                    <input type="text" class="form-input" placeholder="Jane Doe" required>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Company *</label>
+                                    <input type="text" class="form-input" placeholder="Acme Inc." required>
+                                </div>
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Work Email *</label>
+                                    <input type="email" class="form-input" placeholder="jane@acme.com" required>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Phone</label>
+                                    <input type="tel" class="form-input" placeholder="(555) 123-4567">
+                                </div>
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Product Type *</label>
+                                    <select class="form-input" required>
+                                        <option value="">Select product</option>
+                                        <option>Umbrellas</option>
+                                        <option>Rain Jackets</option>
+                                        <option>Rain Boots</option>
+                                        <option>Accessories</option>
+                                        <option>Mixed Bundle</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Estimated Quantity *</label>
+                                    <select class="form-input" required>
+                                        <option value="">Select quantity</option>
+                                        <option>50 – 199 units</option>
+                                        <option>200 – 499 units</option>
+                                        <option>500 – 999 units</option>
+                                        <option>1,000 – 4,999 units</option>
+                                        <option>5,000+ units</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Project Details *</label>
+                                <textarea rows="4" class="form-input" placeholder="Tell us about your project, timeline, budget, and any specific branding requirements..." required></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Upload Logo (optional)</label>
+                                <label for="logo-upload" class="upload-zone block">
+                                    <i class="fas fa-cloud-upload-alt text-2xl text-tech dark:text-neon mb-2"></i>
+                                    <div class="text-sm font-medium text-soil dark:text-white">Click to upload or drag and drop</div>
+                                    <div class="text-xs text-dusk dark:text-gray-400 mt-1">SVG, PNG, JPG or AI (max 10MB)</div>
+                                    <input id="logo-upload" type="file" class="hidden" accept=".svg,.png,.jpg,.jpeg,.ai">
+                                </label>
+                            </div>
+                            <label class="flex items-start gap-2.5 cursor-pointer">
+                                <input type="checkbox" class="mt-1 w-4 h-4 accent-tech rounded" required>
+                                <span class="text-xs text-dusk dark:text-gray-300">I agree to be contacted about my quote and have read the privacy policy.</span>
+                            </label>
+                            <button type="submit" class="btn-primary w-full py-3.5 rounded-full font-bold text-sm inline-flex items-center justify-center gap-2">
+                                <i class="fas fa-paper-plane"></i> Submit Quote Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA BANNER ========== -->
+    <section class="py-16 bg-white dark:bg-[#0F172A]">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="gear-card p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-tech/10 rounded-bl-full"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-thunder/10 rounded-tr-full"></div>
+                <div class="relative z-10 text-center md:text-left">
+                    <span class="text-tech dark:text-neon font-semibold tracking-widest text-xs uppercase">No Commitment</span>
+                    <h2 class="text-2xl md:text-3xl font-display font-bold text-soil dark:text-white mt-1">See Your Logo Before You Buy</h2>
+                    <p class="text-dusk dark:text-gray-300 mt-2 max-w-lg">Free digital mockups, no credit card required. Just tell us what you need.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 relative z-10 shrink-0 justify-center">
+                    <a href="#quote" class="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                        <i class="fas fa-wand-magic-sparkles"></i> Get Free Mockup
+                    </a>
+                    <a href="contact.html" class="btn-outline px-6 py-2.5 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER – copied from reference ========== -->
+    <footer class="bg-white dark:bg-[#0F172A] text-soil dark:text-gray-300 pt-16 pb-8 border-t-4 border-tech transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="text-center md:text-left">
+                    <a href="index.html" class="inline-flex items-center justify-center md:justify-start gap-3 mb-6 group cursor-pointer">
+                        <div class="w-9 h-9 md:w-10 md:h-10 bg-tech rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-umbrella text-white text-base md:text-lg"></i>
+                        </div>
+                        <span class="text-lg md:text-2xl font-display font-bold tracking-tight text-soil dark:text-white group-hover:text-tech dark:group-hover:text-neon transition-colors duration-300">RainGuard</span>
+                    </a>
+                    <p class="text-sm text-dusk dark:text-gray-300 leading-relaxed mb-6">
+                        Durable rain gear, unbeatable prices, expert craftsmanship. Your one-stop shop for umbrellas, raincoats, and accessories.
+                    </p>
+                    <div class="flex justify-center md:justify-start gap-3">
+                        <a href="#" class="social-icon-tech"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-tech"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon-tech"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-tech dark:text-neon mb-5">Shop</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Umbrellas</a></li>
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Raincoats & Jackets</a></li>
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Rain Boots</a></li>
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Accessories</a></li>
+                        <li><a href="collections.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Collections</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-tech dark:text-neon mb-5">Support</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">About Us</a></li>
+                        <li><a href="corporate.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Corporate Branding</a></li>
+                        <li><a href="#" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Warranty & Returns</a></li>
+                        <li><a href="contact.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Contact Us</a></li>
+                        <li><a href="#" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">FAQs</a></li>
+                        <li><a href="#" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-tech dark:text-neon mb-5">Visit Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-map-marker-alt text-tech dark:text-neon"></i>
+                            <span>42 Storm Lane, Portland, OR 97205</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-phone text-tech dark:text-neon"></i>
+                            <span>(555) 234-RAIN</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-envelope text-tech dark:text-neon"></i>
+                            <span>hello@rainguard.com</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-clock text-tech dark:text-neon"></i>
+                            <span>Mon–Sat: 9am – 7pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-sand dark:border-slate-700/50 text-center text-sm text-dusk dark:text-gray-300">
+                <p>© 2026 RainGuard | Umbrella & Rain Gear Store. All rights reserved. <span class="text-tech dark:text-neon">☔ Stay dry, stay stylish.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme toggle
+            const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+            themeBtns.forEach(btn => {
+                btn?.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+                });
+            });
+            if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+            // RTL toggle
+            function setRTL(isRTL) {
+                const html = document.documentElement;
+                if (isRTL) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); }
+                else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+            }
+            const savedDir = localStorage.getItem('dir');
+            if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+            else document.documentElement.setAttribute('dir', 'ltr');
+
+            const rtlBtn = document.getElementById('rtl-toggle');
+            if (rtlBtn) {
+                rtlBtn.addEventListener('click', () => {
+                    const currentDir = document.documentElement.getAttribute('dir');
+                    setRTL(currentDir !== 'rtl');
+                });
+            }
+            const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+            if (mobileRtlBtn) {
+                mobileRtlBtn.addEventListener('click', () => {
+                    const currentDir = document.documentElement.getAttribute('dir');
+                    setRTL(currentDir !== 'rtl');
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const mobileToggle = document.getElementById('mobile-toggle');
+                    if (mobileMenu && mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                        if (mobileToggle && mobileToggle.querySelector('i')) {
+                            mobileToggle.querySelector('i').classList.remove('fa-times');
+                            mobileToggle.querySelector('i').classList.add('fa-bars');
+                        }
+                    }
+                });
+            }
+
+            // Mobile menu toggle
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileToggle && mobileMenu) {
+                mobileToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                    const icon = mobileToggle.querySelector('i');
+                    if (mobileMenu.classList.contains('open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+                mobileMenu.querySelectorAll('a:not(#mobile-rtl-toggle)').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('open');
+                        if (mobileToggle.querySelector('i')) {
+                            mobileToggle.querySelector('i').classList.remove('fa-times');
+                            mobileToggle.querySelector('i').classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // ---- Customizer interactions ----
+            const previewImg = document.getElementById('preview-img');
+            const logoOverlay = document.getElementById('logo-overlay');
+            const productOptions = document.querySelectorAll('#product-options .placement-option');
+            const colorOptions = document.querySelectorAll('#color-options .swatch-btn');
+            const placementOptions = document.querySelectorAll('#placement-options .placement-option');
+
+            // Product selection
+            productOptions.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    productOptions.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    if (btn.dataset.img && previewImg) {
+                        previewImg.style.opacity = '0';
+                        setTimeout(() => {
+                            previewImg.src = btn.dataset.img;
+                            previewImg.style.opacity = '1';
+                        }, 150);
+                    }
+                });
+            });
+
+            // Color selection -> logo overlay border/text color
+            colorOptions.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    colorOptions.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const color = btn.dataset.color;
+                    if (logoOverlay) {
+                        logoOverlay.style.borderColor = color;
+                        const span = logoOverlay.querySelector('span');
+                        if (span) span.style.color = color;
+                    }
+                });
+            });
+
+            // Placement selection
+            placementOptions.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    placementOptions.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    if (logoOverlay) {
+                        logoOverlay.style.top = btn.dataset.top;
+                        logoOverlay.style.left = btn.dataset.left;
+                        logoOverlay.style.width = btn.dataset.w;
+                        logoOverlay.style.height = btn.dataset.h;
+                    }
+                });
+            });
+
+            // File upload display
+            const logoInput = document.getElementById('logo-upload');
+            if (logoInput) {
+                logoInput.addEventListener('change', () => {
+                    if (logoInput.files.length > 0) {
+                        const zone = logoInput.closest('.upload-zone');
+                        zone.querySelector('.text-sm').textContent = 'Selected: ' + logoInput.files[0].name;
+                        zone.querySelector('.text-xs').textContent = 'Click again to change file';
+                    }
+                });
+            }
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

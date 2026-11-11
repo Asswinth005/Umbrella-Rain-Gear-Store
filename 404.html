@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 · Page Not Found | RainGuard Umbrella & Rain Gear Store</title>
+    <!-- Custom Favicon – umbrella icon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563EB'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12h20c0-5.52-4.48-10-10-10zm0 2c3.86 0 7.19 2.59 8.15 6H3.85C4.81 6.59 8.14 4 12 4zm-1 14h2v4h-2v-4z'/%3E%3C/svg%3E">
+    <meta name="description"
+        content="Whoops! That page has drifted away in the storm. The rain gear you seek is elsewhere — let's guide you back to RainGuard.">
+
+    <!-- Tailwind CSS -->
+    <script src="tailwind.js"></script>
+    <script>
+        if (typeof tailwind === 'undefined') {
+            document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        herb: '#4A7C59',
+                        clay: '#C27A4A',
+                        sand: '#E8DCC4',
+                        soil: '#5C4B3A',
+                        cream: '#F9F5ED',
+                        dusk: '#6D6875',
+                        tech: '#2563EB',
+                        techdark: '#1E3A8A',
+                        neon: '#22D3EE',
+                        slatebg: '#0F172A',
+                        rain: '#3B6E9A',
+                        mist: '#D4E3F0',
+                        storm: '#1E2F4A',
+                        thunder: '#F5B041',
+                    },
+                    fontFamily: {
+                        'display': ['"Poppins"', 'system-ui', 'sans-serif'],
+                        'body': ['"Inter"', 'system-ui', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'rain-pattern': "radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 70%)",
+                        'umbrella-texture': "url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z%22 fill=%22rgba(37,99,235,0.03)%22/%3E%3C/svg%3E')",
+                    },
+                    animation: {
+                        'spin-slow': 'spinSlow 12s linear infinite',
+                        'herb-bounce': 'herbBounce 2.5s ease-in-out infinite',
+                        'float-gentle': 'floatGentle 4s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.5s ease-out',
+                        'tech-spin': 'techSpin 4s ease-in-out infinite',
+                        'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+                        'glitch': 'glitch 3s ease-in-out infinite',
+                        'rain-drop': 'rainDrop 3s ease-in infinite',
+                    },
+                    keyframes: {
+                        spinSlow: { '0%': { transform: 'rotate(0deg)' }, '100%': { transform: 'rotate(360deg)' } },
+                        herbBounce: { '0%,100%': { transform: 'translateY(0) rotate(0deg)' }, '50%': { transform: 'translateY(-12px) rotate(8deg)' } },
+                        floatGentle: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-8px)' } },
+                        fadeInUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        techSpin: { '0%': { transform: 'rotate(0deg) scale(1)' }, '50%': { transform: 'rotate(10deg) scale(1.05)' }, '100%': { transform: 'rotate(0deg) scale(1)' } },
+                        pulseSoft: { '0%,100%': { opacity: '0.6' }, '50%': { opacity: '1' } },
+                        glitch: { '0%, 100%': { transform: 'translate(0)' }, '20%': { transform: 'translate(-2px, 2px)' }, '40%': { transform: 'translate(-2px, -2px)' }, '60%': { transform: 'translate(2px, 2px)' }, '80%': { transform: 'translate(2px, -2px)' } },
+                        rainDrop: { '0%': { transform: 'translateY(-10px)', opacity: '0' }, '20%': { opacity: '0.7' }, '80%': { opacity: '0.9' }, '100%': { transform: 'translateY(20px)', opacity: '0' } },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #F9F5ED;
+            font-family: 'Inter', system-ui, sans-serif;
+            color: #5C4B3A;
+            line-height: 1.6;
+        }
+
+        .dark body {
+            background-color: #0B1120;
+            color: #E2E8F0;
+        }
+
+        /* Rain pattern background */
+        body.rain-pattern {
+            background-image: radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 70%),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z' fill='rgba(37,99,235,0.03)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+        }
+
+        .dark body.rain-pattern {
+            background-image: radial-gradient(circle at 20% 30%, rgba(34, 211, 238, 0.04) 0%, transparent 70%),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z' fill='rgba(34,211,238,0.02)'/%3E%3C/svg%3E");
+        }
+
+        /* Dark mode text overrides */
+        .dark .text-soil {
+            color: #E8DCC4;
+        }
+
+        .dark .text-dusk {
+            color: #9CA3AF;
+        }
+
+        .dark body > nav {
+            background-color: rgba(15, 23, 42, 0.96) !important;
+            border-color: rgba(37, 99, 235, 0.25) !important;
+        }
+
+        /* Custom scrollbar */
+        body::-webkit-scrollbar { width: 6px; }
+        body::-webkit-scrollbar-track { background: #E8DCC4; border-radius: 10px; }
+        body::-webkit-scrollbar-thumb { background: #2563EB; border-radius: 10px; }
+        .dark body::-webkit-scrollbar-track { background: #1E293B; }
+        .dark body::-webkit-scrollbar-thumb { background: #22D3EE; }
+
+        /* Button styles - tech blue */
+        .btn-primary {
+            background: #2563EB;
+            color: white;
+            padding: 0.85rem 2rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: #1D4ED8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45);
+        }
+
+        .btn-secondary {
+            border: 1.5px solid #2563EB;
+            background: transparent;
+            color: #2563EB;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dark .btn-secondary {
+            border-color: #22D3EE;
+            color: #22D3EE;
+        }
+
+        .btn-secondary:hover {
+            background: #2563EB;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .dark .btn-secondary:hover {
+            background: #22D3EE;
+            color: #0F172A;
+        }
+
+        /* Accent line - rain gradient */
+        .tech-line {
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(90deg, #2563EB, #22D3EE);
+            margin: 1rem auto;
+            border-radius: 3px;
+        }
+
+        .floating-umbrella {
+            animation: floatGentle 4s ease-in-out infinite;
+        }
+
+        /* Rain drops decoration */
+        .rain-drop-1 { animation: rainDrop 3s ease-in 0.2s infinite; }
+        .rain-drop-2 { animation: rainDrop 3s ease-in 0.8s infinite; }
+        .rain-drop-3 { animation: rainDrop 3s ease-in 1.4s infinite; }
+        .rain-drop-4 { animation: rainDrop 3s ease-in 2s infinite; }
+
+        /* RTL Fixes */
+        [dir="rtl"] .space-x-3> :not([hidden])~ :not([hidden]) {
+            --tw-space-x-reverse: 1;
+            margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+            margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+        }
+
+        [dir="rtl"] .ml-8 {
+            margin-left: 0;
+            margin-right: 2rem;
+        }
+
+        [dir="rtl"] .mr-2 {
+            margin-right: 0;
+            margin-left: 0.5rem;
+        }
+
+        [dir="rtl"] .tech-line {
+            margin: 1rem auto;
+        }
+
+        /* High Contrast Dark Mode Form & Badge Fixes */
+        .dark input, .dark select, .dark textarea {
+            background-color: #0F172A !important;
+            color: #FFFFFF !important;
+            border-color: rgba(34, 211, 238, 0.3) !important;
+        }
+        .dark input::placeholder, .dark textarea::placeholder {
+            color: #94A3B8 !important;
+            opacity: 1 !important;
+        }
+        .dark select option {
+            background-color: #1E293B !important;
+            color: #FFFFFF !important;
+        }
+        .dark label {
+            color: #F1F5F9 !important;
+        }
+
+        /* Glitch effect for 404 */
+        .glitch-text {
+            position: relative;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+        }
+
+        .glitch-text::before {
+            color: #22D3EE;
+            animation: glitch 3s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .glitch-text::after {
+            color: #F5B041;
+            animation: glitch 3s ease-in-out infinite reverse;
+            z-index: -2;
+        }
+    </style>
+</head>
+
+<body class="bg-cream dark:bg-[#0B1120] rain-pattern">
+
+    <!-- ========== HEADER (simplified) ========== -->
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#0F172A]/95 backdrop-blur-md border-b border-sand dark:border-slate-700/50 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-24 md:h-24 py-3 md:py-0">
+                <!-- Logo with umbrella icon -->
+                <a href="index.html" class='flex items-center gap-2 md:gap-3 group shrink-0'>
+                    <div
+                        class="w-9 h-9 md:w-10 md:h-10 bg-tech rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition duration-300">
+                        <i class="fas fa-umbrella text-white text-base md:text-lg"></i>
+                    </div>
+                    <div>
+                        <span
+                            class="text-lg md:text-2xl font-display font-bold tracking-tight text-soil dark:text-white">RainGuard</span>
+                    </div>
+                </a>
+
+                <!-- Toggle Buttons Only -->
+                <div class="flex items-center gap-3">
+                    <button id="theme-toggle"
+                        class="w-10 h-10 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon hover:scale-110 transition flex items-center justify-center">
+                        <i class="fas fa-moon dark:hidden text-tech"></i>
+                        <i class="fas fa-sun hidden dark:inline text-amber-300"></i>
+                    </button>
+                    <button id="rtl-toggle"
+                        class="w-10 h-10 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon hover:scale-110 transition flex items-center justify-center font-bold text-base"
+                        title="Toggle RTL/LTR">⇄</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== 404 MAIN CONTENT ========== -->
+    <div class="min-h-screen flex items-center justify-center pt-32 pb-20 px-6 relative overflow-hidden">
+
+        <!-- Background rain drops -->
+        <div class="absolute inset-0 pointer-events-none z-0 opacity-40 dark:opacity-20">
+            <i class="fas fa-tint text-tech dark:text-neon text-xs absolute top-20 left-[15%] rain-drop-1"></i>
+            <i class="fas fa-tint text-tech dark:text-neon text-sm absolute top-32 left-[45%] rain-drop-2"></i>
+            <i class="fas fa-tint text-tech dark:text-neon text-xs absolute top-16 right-[25%] rain-drop-3"></i>
+            <i class="fas fa-tint text-tech dark:text-neon text-sm absolute top-40 right-[40%] rain-drop-4"></i>
+        </div>
+
+        <div class="max-w-2xl mx-auto text-center animate-fade-in-up relative z-10">
+
+            <!-- Animated Umbrella Icon -->
+            <div class="mb-6 floating-umbrella">
+                <div
+                    class="w-28 h-28 md:w-36 md:h-36 rounded-full border-8 border-tech/30 flex items-center justify-center mx-auto relative">
+                    <i class="fas fa-umbrella text-tech dark:text-neon text-5xl md:text-6xl animate-tech-spin"></i>
+                    <div class="absolute inset-0 rounded-full border-4 border-tech/20 animate-pulse-soft"></div>
+                    <!-- rain drops badge -->
+                    <div class="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-tech/10 flex items-center justify-center">
+                        <i class="fas fa-cloud-rain text-tech dark:text-neon text-xs"></i>
+                    </div>
+                    <!-- thunder badge -->
+                    <div class="absolute -bottom-1 -left-2 w-9 h-9 rounded-full bg-thunder/15 flex items-center justify-center">
+                        <i class="fas fa-bolt text-thunder text-xs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Large 404 Number with glitch -->
+            <div class="mb-4 relative">
+                <span
+                    class="glitch-text text-[120px] md:text-[180px] font-display font-extrabold text-tech dark:text-neon leading-none tracking-tighter drop-shadow-lg inline-block"
+                    data-text="404">404</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-2xl md:text-3xl font-display font-bold text-soil dark:text-white mb-3">
+                Washed Away. Page Not Found.
+            </h1>
+
+            <!-- Divider -->
+            <div class="tech-line"></div>
+
+            <!-- Message -->
+            <p class="text-base md:text-lg text-dusk dark:text-gray-300 mb-8 leading-relaxed max-w-md mx-auto">
+                Looks like this page got caught in the storm. Don't worry — grab your umbrella and let's get you back to dry land, where the best rain gear and deals are waiting.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-4 justify-center mb-12">
+                <a href="index.html" class="btn-primary">
+                    <i class="fas fa-home mr-1"></i> Return Home
+                </a>
+                <a href="products.html" class="btn-secondary">
+                    <i class="fas fa-umbrella mr-1"></i> Shop Rain Gear
+                </a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="border-t border-tech/20 dark:border-neon/20 pt-8">
+                <p class="text-sm text-dusk dark:text-gray-200 mb-4">
+                    <i class="fas fa-cloud-sun-rain text-tech dark:text-neon mr-2"></i> Reconnect with RainGuard — Quick Links
+                </p>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <a href="about.html"
+                        class="text-sm font-medium text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">About</a>
+                    <span class="text-tech dark:text-neon/40">•</span>
+                    <a href="products.html"
+                        class="text-sm font-medium text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Products</a>
+                    <span class="text-tech dark:text-neon/40">•</span>
+                    <a href="collections.html"
+                        class="text-sm font-medium text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Collections</a>
+                    <span class="text-tech dark:text-neon/40">•</span>
+                    <a href="corporate.html"
+                        class="text-sm font-medium text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Corporate Branding</a>
+                    <span class="text-tech dark:text-neon/40">•</span>
+                    <a href="contact.html"
+                        class="text-sm font-medium text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Contact</a>
+                </div>
+            </div>
+
+            <!-- Gentle Note -->
+            <div class="mt-8 text-xs text-dusk dark:text-gray-300 font-medium">
+                <i class="fas fa-umbrella mr-1 text-tech dark:text-neon"></i> Even the best umbrellas flip inside out sometimes. We'll get you back under cover.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+        // ---------- THEME TOGGLE ----------
+        const themeToggle = document.getElementById('theme-toggle');
+        function setTheme(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            setTheme(true);
+        } else if (savedTheme === 'light') {
+            setTheme(false);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setTheme(true);
+        }
+        if (themeToggle) {
+            themeToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                setTheme(!document.documentElement.classList.contains('dark'));
+            });
+        }
+
+        // ---------- RTL TOGGLE ----------
+        const rtlBtn = document.getElementById('rtl-toggle');
+        function setRTL(isRTL) {
+            if (isRTL) {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+                localStorage.setItem('dir', 'rtl');
+            } else {
+                document.documentElement.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', 'en');
+                localStorage.setItem('dir', 'ltr');
+            }
+        }
+        const savedDir = localStorage.getItem('dir');
+        if (savedDir === 'rtl') setRTL(true);
+        else setRTL(false);
+
+        if (rtlBtn) {
+            rtlBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const currentDir = document.documentElement.getAttribute('dir');
+                setRTL(currentDir !== 'rtl');
+            });
+        }
+
+        });
+    </script>
+</body>
+
+</html>

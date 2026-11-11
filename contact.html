@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | RainGuard · Get in Touch</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563EB'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12h20c0-5.52-4.48-10-10-10zm0 2c3.86 0 7.19 2.59 8.15 6H3.85C4.81 6.59 8.14 4 12 4zm-1 14h2v4h-2v-4z'/%3E%3C/svg%3E">
+
+    <script src="tailwind.js"></script>
+    <script>
+        if (typeof tailwind === 'undefined') {
+            document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        herb: '#4A7C59', clay: '#C27A4A', sand: '#E8DCC4', soil: '#5C4B3A',
+                        cream: '#F9F5ED', dusk: '#6D6875', tech: '#2563EB', techdark: '#1E3A8A',
+                        neon: '#22D3EE', slatebg: '#0F172A', rain: '#3B6E9A', mist: '#D4E3F0',
+                        storm: '#1E2F4A', cloud: '#F0F4F8', thunder: '#F5B041', bark: '#5C4B3A',
+                    },
+                    fontFamily: {
+                        'display': ['"Poppins"', 'system-ui', 'sans-serif'],
+                        'body': ['"Inter"', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float-slow': 'floatSlow 6s ease-in-out infinite',
+                        'spin-slow': 'spinSlow 12s linear infinite',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-gentle': 'bounceGentle 2.5s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                        'rain-drop': 'rainDrop 3s ease-in infinite',
+                    },
+                    keyframes: {
+                        floatSlow: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+                        spinSlow: { '0%': { transform: 'rotate(0deg)' }, '100%': { transform: 'rotate(360deg)' } },
+                        slideUp: { '0%': { transform: 'translateY(40px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        bounceGentle: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-5px)' } },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        pulseGlow: { '0%, 100%': { boxShadow: '0 0 5px rgba(34,211,238,0.3)' }, '50%': { boxShadow: '0 0 20px rgba(34,211,238,0.6)' } },
+                        rainDrop: { '0%': { transform: 'translateY(-10px)', opacity: '0' }, '20%': { opacity: '0.7' }, '80%': { opacity: '0.9' }, '100%': { transform: 'translateY(20px)', opacity: '0' } },
+                    },
+                    backgroundImage: {
+                        'rain-pattern': "radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 70%)",
+                        'umbrella-texture': "url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z%22 fill=%22rgba(37,99,235,0.03)%22/%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { background-color: #F9F5ED; color: #5C4B3A; font-family: 'Inter', system-ui, sans-serif; }
+        .dark body { background-color: #0B1120; color: #E2E8F0; }
+        .rain-pattern, .umbrella-texture, body.rain-pattern, body.umbrella-texture {
+            background-image: radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 70%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z' fill='rgba(37,99,235,0.03)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+        }
+        .dark .rain-pattern, .dark .umbrella-texture, .dark body.rain-pattern, .dark body.umbrella-texture {
+            background-image: radial-gradient(circle at 20% 30%, rgba(34, 211, 238, 0.04) 0%, transparent 70%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10 L35 25 L50 30 L35 40 L38 55 L30 45 L22 55 L25 40 L10 30 L25 25 Z' fill='rgba(34,211,238,0.02)'/%3E%3C/svg%3E");
+        }
+        .dark body > nav { background-color: rgba(15, 23, 42, 0.96) !important; border-color: rgba(37, 99, 235, 0.25) !important; }
+        .dark section.bg-white, .dark section[class*="bg-white"] { background-color: #0F172A !important; }
+        body::-webkit-scrollbar { width: 6px; }
+        body::-webkit-scrollbar-track { background: #E8DCC4; border-radius: 10px; }
+        body::-webkit-scrollbar-thumb { background: #2563EB; border-radius: 10px; }
+        .dark body::-webkit-scrollbar-track { background: #1E293B; }
+        .dark body::-webkit-scrollbar-thumb { background: #22D3EE; }
+
+        .gear-card { background: white; border-radius: 24px; transition: all 0.35s ease; border: 1px solid rgba(37, 99, 235, 0.12); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04); }
+        .dark .gear-card { background: #1E293B; border-color: rgba(34, 211, 238, 0.2); }
+        .gear-card:hover { transform: translateY(-6px); box-shadow: 0 20px 35px -12px rgba(37, 99, 235, 0.25); border-color: #2563EB; }
+        .dark .gear-card:hover { border-color: #22D3EE; }
+
+        .btn-primary { background-color: #2563EB; color: white; font-weight: 600; border-radius: 50px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35); }
+        .btn-primary:hover { background-color: #1D4ED8; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45); }
+        .btn-outline { border: 1.5px solid #2563EB; color: #2563EB; background: transparent; border-radius: 50px; font-weight: 500; transition: all 0.3s; }
+        .btn-outline:hover { background-color: #2563EB; color: white; transform: translateY(-2px); }
+        .dark .btn-outline { border-color: #22D3EE; color: #22D3EE; }
+        .dark .btn-outline:hover { background-color: #22D3EE; color: #0F172A; }
+        .btn-outline.text-neon { border-color: #22D3EE !important; color: #22D3EE !important; }
+        .btn-outline.text-neon:hover { background-color: #22D3EE !important; color: #0F172A !important; }
+
+        .nav-link { position: relative; font-weight: 500; }
+        .nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2.5px; background-color: #2563EB; transition: width 0.25s ease; border-radius: 3px; }
+        .dark .nav-link::after { background-color: #22D3EE; }
+        .nav-link:hover::after { width: 100%; }
+
+        .dropdown-tech { position: relative; }
+        .dropdown-tech-menu { position: absolute; top: 100%; left: 0; min-width: 210px; background: white; border-radius: 18px; padding: 0.6rem 0; box-shadow: 0 18px 32px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transform: translateY(12px); transition: all 0.25s ease; z-index: 1000; border: 1px solid rgba(37, 99, 235, 0.2); }
+        .dropdown-tech-menu::before { content: ''; position: absolute; top: -12px; left: 0; right: 0; height: 12px; }
+        .dark .dropdown-tech-menu { background: #1E293B; border-color: rgba(34, 211, 238, 0.3); }
+        .dropdown-tech:hover .dropdown-tech-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-item { display: flex; align-items: center; padding: 0.65rem 1.4rem; transition: all 0.2s; color: #5C4B3A; }
+        .dark .dropdown-item { color: #E2E8F0; }
+        .dropdown-item:hover { background-color: #F9F5ED; color: #2563EB; padding-left: 1.7rem; }
+        .dark .dropdown-item:hover { background-color: #0F172A; color: #22D3EE; }
+        .dropdown-item i { margin-right: 0.75rem; width: 20px; }
+
+        .mobile-menu-tech { background: white; max-height: 0; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 0 0 24px 24px; }
+        .dark .mobile-menu-tech { background: #0F172A; }
+        .mobile-menu-tech.open { max-height: 80vh; overflow-y: auto; scrollbar-width: none; }
+        .mobile-menu-tech.open::-webkit-scrollbar { display: none; }
+
+        .stat-badge { background: white; border-radius: 24px; padding: 1rem; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); border: 1px solid rgba(37, 99, 235, 0.15); }
+        .dark .stat-badge { background: #1E293B; border-color: rgba(34, 211, 238, 0.2); }
+
+        .testimonial-card { background: white; border-radius: 28px; padding: 1.8rem; border-left: 5px solid #2563EB; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05); }
+        .dark .testimonial-card { background: #1E293B; border-left-color: #22D3EE; }
+
+        .social-icon-tech { width: 38px; height: 38px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background-color: #F9F5ED; color: #2563EB; transition: all 0.3s; }
+        .social-icon-tech:hover { background-color: #2563EB; color: white; transform: translateY(-3px); }
+        .dark .social-icon-tech { background-color: #334155; color: #E2E8F0; }
+        .dark .social-icon-tech:hover { background-color: #22D3EE; color: #0F172A; }
+
+        [dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+        [dir="rtl"] .border-l-4 { border-left-width: 0 !important; border-right-width: 4px !important; }
+        [dir="rtl"] .ml-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+        html[dir="rtl"] .dropdown-tech-menu { left: auto; right: 0; }
+        html[dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
+        html[dir="rtl"] .dropdown-item:hover { padding-left: 1.4rem; padding-right: 1.7rem; }
+        html[dir="rtl"] .testimonial-card { border-left: none; border-right: 5px solid #2563EB; }
+        html[dir="rtl"].dark .testimonial-card, .dark html[dir="rtl"] .testimonial-card { border-right-color: #22D3EE; }
+        html[dir="rtl"] .text-left { text-align: right; }
+
+        .dark input, .dark select, .dark textarea { background-color: #0F172A !important; color: #FFFFFF !important; border-color: rgba(34, 211, 238, 0.3) !important; }
+        .dark input::placeholder, .dark textarea::placeholder { color: #94A3B8 !important; opacity: 1 !important; }
+        .dark select option { background-color: #1E293B !important; color: #FFFFFF !important; }
+        .dark label { color: #F1F5F9 !important; }
+
+        /* ========== NEW CONTACT PAGE STYLES ========== */
+        .contact-hero {
+            background: linear-gradient(145deg, #0A1628 0%, #142844 50%, #1E3A5F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: -25%;
+            left: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 65%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .contact-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(34,211,238,0.12) 0%, transparent 65%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Quick contact cards */
+        .contact-card {
+            background: white;
+            border-radius: 22px;
+            padding: 1.75rem;
+            border: 1px solid rgba(37, 99, 235, 0.12);
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 36px -14px rgba(37, 99, 235, 0.28);
+            border-color: #2563EB;
+        }
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2563EB, #22D3EE);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s ease;
+        }
+        .contact-card:hover::before { transform: scaleX(1); }
+        .dark .contact-card { background: #1E293B; border-color: rgba(34, 211, 238, 0.15); }
+        .dark .contact-card:hover { border-color: #22D3EE; }
+
+        .contact-icon {
+            width: 3.25rem;
+            height: 3.25rem;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .contact-card:hover .contact-icon { transform: scale(1.08) rotate(-4deg); }
+
+        /* Form styling */
+        .form-input {
+            width: 100%;
+            border-radius: 14px;
+            border: 1.5px solid #E8DCC4;
+            padding: 0.8rem 1rem;
+            font-size: 0.9rem;
+            background: #FDFBF7;
+            color: #5C4B3A;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-input:focus { outline: none; border-color: #2563EB; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12); background: white; }
+        .dark .form-input { background: #0F172A; border-color: #334155; color: #FFFFFF; }
+        .dark .form-input:focus { border-color: #22D3EE; box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12); }
+
+        .inquiry-panel {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem;
+            border: 1px solid rgba(37, 99, 235, 0.12);
+            box-shadow: 0 12px 32px -8px rgba(37, 99, 235, 0.12);
+        }
+        .dark .inquiry-panel { background: #1E293B; border-color: rgba(34, 211, 238, 0.15); }
+
+        /* Department selector cards */
+        .dept-option {
+            cursor: pointer;
+            border-radius: 16px;
+            padding: 1rem;
+            border: 1.5px solid #E8DCC4;
+            background: #FDFBF7;
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.5rem;
+        }
+        .dept-option:hover { border-color: #2563EB; background: rgba(37, 99, 235, 0.04); }
+        .dept-option.active { border-color: #2563EB; background: rgba(37, 99, 235, 0.08); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12); }
+        .dept-option i { font-size: 1.3rem; color: #2563EB; }
+        .dept-option span { font-size: 0.8rem; font-weight: 600; color: #5C4B3A; }
+        .dark .dept-option { background: #0F172A; border-color: #334155; }
+        .dark .dept-option:hover { border-color: #22D3EE; background: rgba(34, 211, 238, 0.05); }
+        .dark .dept-option.active { border-color: #22D3EE; background: rgba(34, 211, 238, 0.08); box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12); }
+        .dark .dept-option i { color: #22D3EE; }
+        .dark .dept-option span { color: #E2E8F0; }
+
+        /* Map panel */
+        .map-panel {
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+            border: 4px solid white;
+            box-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.25);
+        }
+        .dark .map-panel { border-color: #1E293B; }
+        .map-panel iframe { filter: grayscale(0.3) contrast(1.05); transition: filter 0.3s; }
+        .map-panel:hover iframe { filter: grayscale(0) contrast(1); }
+        .dark .map-panel iframe { filter: grayscale(0.5) invert(0.9) hue-rotate(180deg) contrast(0.9); }
+        .dark .map-panel:hover iframe { filter: grayscale(0.2) invert(0.9) hue-rotate(180deg) contrast(0.9); }
+
+        /* FAQ accordion */
+        .faq-item {
+            border-bottom: 1px solid #E8DCC4;
+            transition: all 0.3s ease;
+        }
+        .dark .faq-item { border-color: #334155; }
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 0;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #5C4B3A;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .faq-question:hover { color: #2563EB; }
+        .dark .faq-question { color: #E2E8F0; }
+        .dark .faq-question:hover { color: #22D3EE; }
+        .faq-question i { transition: transform 0.3s ease; font-size: 0.8rem; color: #2563EB; }
+        .dark .faq-question i { color: #22D3EE; }
+        .faq-item.open .faq-question i { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+            font-size: 0.875rem;
+            color: #6D6875;
+            line-height: 1.7;
+        }
+        .dark .faq-answer { color: #94A3B8; }
+        .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 1.25rem; }
+
+        /* Store hours panel */
+        .hours-panel {
+            background: linear-gradient(135deg, #2563EB 0%, #1E3A8A 100%);
+            border-radius: 24px;
+            padding: 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .hours-panel::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .accent-divider {
+            height: 4px;
+            width: 60px;
+            background: linear-gradient(90deg, #2563EB, #22D3EE);
+            border-radius: 4px;
+        }
+
+        /* Social connect row */
+        .social-connect {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: white;
+            color: #2563EB;
+            border: 1px solid rgba(37, 99, 235, 0.15);
+            transition: all 0.3s ease;
+        }
+        .social-connect:hover { background: #2563EB; color: white; transform: translateY(-3px); box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3); }
+        .dark .social-connect { background: #1E293B; color: #22D3EE; border-color: rgba(34, 211, 238, 0.2); }
+        .dark .social-connect:hover { background: #22D3EE; color: #0F172A; }
+    </style>
+</head>
+
+<body class="rain-pattern umbrella-texture">
+
+    <!-- ========== NAVIGATION – copied from reference ========== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#0F172A]/95 backdrop-blur-md border-b border-sand dark:border-slate-700/50 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-24 md:h-24 py-3 md:py-0">
+                <div class="flex items-center flex-1">
+                    <a class='flex items-center gap-2 md:gap-3 group shrink-0' href='index.html'>
+                        <div class="w-9 h-9 md:w-10 md:h-10 bg-tech rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition duration-300">
+                            <i class="fas fa-umbrella text-white text-base md:text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-lg md:text-2xl font-display font-bold tracking-tight text-soil dark:text-white">RainGuard</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center justify-center gap-4 xl:gap-8 shrink-0">
+                    <div class="dropdown-tech">
+                        <button class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition flex items-center gap-1 py-2 whitespace-nowrap text-sm xl:text-base">
+                            Home <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </button>
+                        <div class="dropdown-tech-menu">
+                            <a class="dropdown-item" href="index.html">Home 1</a>
+                            <a class="dropdown-item" href="home2.html">Home 2</a>
+                        </div>
+                    </div>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="about.html">About</a>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="products.html">Products</a>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="collections.html">Collections</a>
+                    <a class="nav-link text-dusk dark:text-gray-200 hover:text-tech transition whitespace-nowrap text-sm xl:text-base" href="corporate.html">Corporate Branding</a>
+                    <a class="nav-link text-tech dark:text-neon font-bold transition whitespace-nowrap text-sm xl:text-base" href="contact.html">Contact</a>
+                </div>
+
+                <div class="flex items-center justify-end flex-1 gap-3 lg:gap-4 shrink-0">
+                    <div class="hidden lg:flex items-center gap-4">
+                        <a href="contact.html" class="btn-primary h-10 px-5 text-sm font-semibold inline-flex items-center justify-center whitespace-nowrap">Enquire Now</a>
+                        <button id="theme-toggle" class="w-10 h-10 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon hover:scale-110 transition flex items-center justify-center">
+                            <i class="fas fa-moon dark:hidden text-tech"></i>
+                            <i class="fas fa-sun hidden dark:inline text-amber-300"></i>
+                        </button>
+                        <button id="rtl-toggle" class="w-10 h-10 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon hover:scale-110 transition flex items-center justify-center font-bold text-base" title="Toggle RTL/LTR">⇄</button>
+                    </div>
+
+                    <button id="mobile-toggle" class="lg:hidden w-10 h-10 rounded-full bg-tech text-white flex items-center justify-center shadow-md">
+                        <i class="fas fa-bars text-base"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-tech lg:hidden">
+                <div class="py-4 px-3 space-y-1">
+                    <div class="py-1">
+                        <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition cursor-pointer">
+                            <span class="flex items-center gap-2"><i class="fas fa-home text-sm"></i> Home</span>
+                            <i id="home-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300"></i>
+                        </button>
+                        <div id="home-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+                            <a class="block py-2.5 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="index.html">
+                                <i class="far fa-circle mr-2 text-xs"></i> Home 1
+                            </a>
+                            <a class="block py-2.5 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="home2.html">
+                                <i class="far fa-circle mr-2 text-xs"></i> Home 2
+                            </a>
+                        </div>
+                    </div>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="about.html">About</a>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="products.html">Products</a>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="collections.html">Collections</a>
+                    <a class="block py-3 px-4 font-medium text-dusk dark:text-gray-200 hover:bg-sand dark:hover:bg-slate-700/30 rounded-xl transition" href="corporate.html">Corporate Branding</a>
+                    <a class="block py-3 px-4 font-medium text-tech dark:text-neon bg-tech/5 border-l-4 border-tech rounded-xl transition" href="contact.html">Contact</a>
+                    <div class="flex flex-col gap-3 pt-5 mt-3 border-t border-sand dark:border-slate-700/50">
+                        <a class="text-center btn-primary py-2.5 rounded-full font-semibold" href="contact.html">Enquire Now</a>
+                        <div class="flex gap-3">
+                            <button id="mobile-theme-toggle" class="flex-1 py-2 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon text-sm font-medium flex items-center gap-2 justify-center">
+                                <i class="fas fa-moon dark:hidden text-tech"></i><i class="fas fa-sun hidden dark:inline text-amber-300"></i>
+                                Theme
+                            </button>
+                            <button id="mobile-rtl-toggle" class="flex-1 py-2 rounded-full bg-sand dark:bg-slate-700 text-tech dark:text-neon text-sm font-medium flex items-center gap-2 justify-center">
+                                ⇄ RTL Mode
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== CONTACT HERO ========== -->
+    <section class="contact-hero pt-32 pb-20 text-white relative overflow-hidden bg-[#0F172A]">
+        <!-- Site-related Hero Background Image & Gradient Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/contact-hero-rain.jpg" alt="Rain drops on window glass" class="w-full h-full object-cover opacity-35">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0F172A]/85 via-[#0F172A]/75 to-[#0F172A]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center animate-slide-up">
+                <nav class="flex items-center justify-center gap-2 text-xs font-medium text-gray-400 mb-5">
+                    <a href="index.html" class="hover:text-neon transition">Home</a>
+                    <i class="fas fa-chevron-right text-[8px]"></i>
+                    <span class="text-neon">Contact</span>
+                </nav>
+                <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 text-neon text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">
+                    <i class="fas fa-comments"></i> We're Here to Help
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-5">
+                    Let's Talk <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon via-tech to-clay">Rain Gear.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed mb-8 font-normal">
+                    Questions about a product? Need a bulk quote? Or just want to say hello? Our team in Portland is ready to help — usually within one business day.
+                </p>
+                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8 text-sm text-gray-300 mb-10">
+                    <div class="flex items-center gap-2"><i class="fas fa-clock text-neon"></i><span>Replies within 24 hrs</span></div>
+                    <div class="flex items-center gap-2"><i class="fas fa-user-tie text-neon"></i><span>Real humans, no bots</span></div>
+                    <div class="flex items-center gap-2"><i class="fas fa-globe text-neon"></i><span>We ship worldwide</span></div>
+                </div>
+
+                <!-- Direct Lines Quick Bar -->
+                <div class="inline-flex flex-wrap items-center justify-center gap-4 md:gap-6 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-6 py-4 shadow-xl">
+                    <a href="tel:+15552347246" class="flex items-center gap-2 text-sm text-white hover:text-neon transition font-medium">
+                        <i class="fas fa-phone text-neon"></i> (555) 234-RAIN
+                    </a>
+                    <span class="text-white/20 hidden sm:inline">|</span>
+                    <a href="mailto:hello@rainguard.com" class="flex items-center gap-2 text-sm text-white hover:text-neon transition font-medium">
+                        <i class="fas fa-envelope text-neon"></i> hello@rainguard.com
+                    </a>
+                    <span class="text-white/20 hidden sm:inline">|</span>
+                    <a href="#map" class="flex items-center gap-2 text-sm text-white hover:text-neon transition font-medium">
+                        <i class="fas fa-store text-neon"></i> 42 Storm Lane, Portland
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUICK CONTACT CARDS ========== -->
+    <section class="py-16 bg-white dark:bg-[#0F172A] relative z-20">
+        <div class="container mx-auto px-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-tech/10 dark:bg-tech/20 text-tech dark:text-neon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-soil dark:text-white mb-1">Customer Support</h3>
+                    <p class="text-dusk dark:text-gray-300 text-sm mb-4 leading-relaxed">Orders, shipping, returns, and product questions.</p>
+                    <a href="mailto:support@rainguard.com" class="text-tech dark:text-neon text-sm font-semibold hover:underline inline-flex items-center gap-1">support@rainguard.com <i class="fas fa-arrow-right text-[10px]"></i></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-clay/10 text-clay">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-soil dark:text-white mb-1">Corporate Sales</h3>
+                    <p class="text-dusk dark:text-gray-300 text-sm mb-4 leading-relaxed">Bulk orders, custom branding, and partnerships.</p>
+                    <a href="mailto:corporate@rainguard.com" class="text-clay text-sm font-semibold hover:underline inline-flex items-center gap-1">corporate@rainguard.com <i class="fas fa-arrow-right text-[10px]"></i></a>
+                </div>
+                <!-- Card 3 -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-thunder/10 text-thunder">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-soil dark:text-white mb-1">Order Tracking</h3>
+                    <p class="text-dusk dark:text-gray-300 text-sm mb-4 leading-relaxed">Check your order status and delivery updates.</p>
+                    <a href="#" class="text-thunder text-sm font-semibold hover:underline inline-flex items-center gap-1">Track My Order <i class="fas fa-arrow-right text-[10px]"></i></a>
+                </div>
+                <!-- Card 4 -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-herb/10 text-herb dark:text-green-400">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-soil dark:text-white mb-1">Press & Media</h3>
+                    <p class="text-dusk dark:text-gray-300 text-sm mb-4 leading-relaxed">Interviews, brand assets, and media inquiries.</p>
+                    <a href="mailto:press@rainguard.com" class="text-herb dark:text-green-400 text-sm font-semibold hover:underline inline-flex items-center gap-1">press@rainguard.com <i class="fas fa-arrow-right text-[10px]"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MAIN CONTACT FORM + MAP ========== -->
+    <section class="py-16 bg-cream/40 dark:bg-slate-800/20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-5 gap-10 max-w-6xl mx-auto items-start">
+                <!-- Left: form -->
+                <div class="lg:col-span-3">
+                    <div class="inquiry-panel">
+                        <div class="mb-6">
+                            <span class="text-tech dark:text-neon font-semibold tracking-widest text-xs uppercase">Send a Message</span>
+                            <div class="accent-divider my-3"></div>
+                            <h2 class="text-2xl md:text-3xl font-display font-bold text-soil dark:text-white">How Can We Help?</h2>
+                            <p class="text-dusk dark:text-gray-300 text-sm mt-2">Choose a department and we'll route your message to the right person.</p>
+                        </div>
+
+                        <!-- Department selector -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                            <button type="button" class="dept-option active" data-dept="support">
+                                <i class="fas fa-headset"></i>
+                                <span>Support</span>
+                            </button>
+                            <button type="button" class="dept-option" data-dept="corporate">
+                                <i class="fas fa-building"></i>
+                                <span>Corporate</span>
+                            </button>
+                            <button type="button" class="dept-option" data-dept="press">
+                                <i class="fas fa-bullhorn"></i>
+                                <span>Press</span>
+                            </button>
+                            <button type="button" class="dept-option" data-dept="other">
+                                <i class="fas fa-comment-dots"></i>
+                                <span>Other</span>
+                            </button>
+                        </div>
+
+                        <form class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">First Name *</label>
+                                    <input type="text" class="form-input" placeholder="Jane" required>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Last Name *</label>
+                                    <input type="text" class="form-input" placeholder="Doe" required>
+                                </div>
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Email Address *</label>
+                                    <input type="email" class="form-input" placeholder="jane@example.com" required>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Phone (optional)</label>
+                                    <input type="tel" class="form-input" placeholder="(555) 123-4567">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Subject *</label>
+                                <input type="text" class="form-input" placeholder="What's this about?" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Order Number (if applicable)</label>
+                                <input type="text" class="form-input" placeholder="#RG-00000">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-soil dark:text-gray-200 mb-1.5">Your Message *</label>
+                                <textarea rows="5" class="form-input" placeholder="Tell us how we can help..." required></textarea>
+                            </div>
+                            <label class="flex items-start gap-2.5 cursor-pointer">
+                                <input type="checkbox" class="mt-1 w-4 h-4 accent-tech rounded" required>
+                                <span class="text-xs text-dusk dark:text-gray-300">I agree to the privacy policy and consent to being contacted about my inquiry.</span>
+                            </label>
+                            <button type="submit" class="btn-primary w-full py-3.5 rounded-full font-bold text-sm inline-flex items-center justify-center gap-2">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right: map + hours -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- Map -->
+                    <div id="map" class="map-panel">
+                        <iframe
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-122.70%2C45.50%2C-122.65%2C45.53&layer=mapnik&marker=45.515%2C-122.675"
+                            width="100%"
+                            height="280"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="RainGuard Store Location">
+                        </iframe>
+                        <div class="absolute bottom-3 left-3 right-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg flex items-center justify-between">
+                            <div>
+                                <div class="font-bold text-sm text-soil dark:text-white">RainGuard Flagship</div>
+                                <div class="text-xs text-dusk dark:text-gray-400">42 Storm Lane, Portland, OR</div>
+                            </div>
+                            <a href="https://www.openstreetmap.org/?mlat=45.515&mlon=-122.675#map=15/45.515/-122.675" target="_blank" rel="noopener" class="btn-primary text-[11px] px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">
+                                Directions
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hours panel -->
+                    <div class="hours-panel">
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">Store Hours</h3>
+                                    <p class="text-white/70 text-xs">Pacific Time (PT)</p>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 text-sm">
+                                <li class="flex justify-between items-center pb-2 border-b border-white/15">
+                                    <span class="text-white/85">Monday – Friday</span>
+                                    <span class="font-semibold">9:00 AM – 7:00 PM</span>
+                                </li>
+                                <li class="flex justify-between items-center pb-2 border-b border-white/15">
+                                    <span class="text-white/85">Saturday</span>
+                                    <span class="font-semibold">10:00 AM – 6:00 PM</span>
+                                </li>
+                                <li class="flex justify-between items-center pb-2 border-b border-white/15">
+                                    <span class="text-white/85">Sunday</span>
+                                    <span class="font-semibold">Closed</span>
+                                </li>
+                                <li class="flex justify-between items-center pt-1">
+                                    <span class="text-white/85">Online Support</span>
+                                    <span class="font-semibold text-neon">24/7</span>
+                                </li>
+                            </ul>
+                            <div class="mt-5 pt-4 border-t border-white/15 flex items-center gap-2 text-xs text-white/80">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Holiday hours may vary — check our socials for updates.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social connect -->
+                    <div class="gear-card p-6">
+                        <h4 class="font-bold text-soil dark:text-white text-sm mb-1">Follow Along</h4>
+                        <p class="text-dusk dark:text-gray-300 text-xs mb-4">Product drops, rain tips, and behind-the-scenes.</p>
+                        <div class="flex gap-3">
+                            <a href="#" class="social-connect" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-connect" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-connect" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-connect" aria-label="Twitter / X"><i class="fab fa-x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ACCORDION ========== -->
+    <section class="py-20 bg-white dark:bg-[#0F172A]">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-12">
+                <span class="text-tech dark:text-neon font-semibold tracking-wider text-sm uppercase bg-cream/60 dark:bg-slate-800/60 px-5 py-1.5 rounded-full inline-block">❓ Common Questions</span>
+                <h2 class="text-3xl md:text-4xl font-display font-bold mt-4 text-soil dark:text-white">Frequently Asked <span class="text-tech dark:text-neon">Questions</span></h2>
+                <p class="text-dusk dark:text-gray-300 max-w-lg mx-auto mt-3">Can't find what you're looking for? Drop us a message above and we'll help.</p>
+            </div>
+
+            <div class="space-y-0">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does shipping take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Standard shipping within the US takes 3–5 business days. Express shipping arrives in 1–2 business days. International orders typically take 7–14 business days depending on the destination. Free standard shipping is included on orders over $50.
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is your return policy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        We offer free returns within 30 days of delivery on unworn, unused items in original packaging. Simply email support@rainguard.com with your order number and we'll send you a prepaid return label. Refunds are processed within 5 business days of receiving your return.
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do your products come with a warranty?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Yes — all RainGuard products carry a 2-year manufacturer's warranty covering defects in materials and workmanship. If your gear fails under normal use within two years, we'll repair or replace it free of charge. Just keep your order confirmation.
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I customize products with my company logo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Absolutely. Our corporate branding service supports screen printing, embroidery, debossing, and full-color digital printing on umbrellas, raincoats, boots, and accessories. Minimum order is 50 units. Visit our Corporate Branding page or email corporate@rainguard.com for a free mockup and quote.
+                    </div>
+                </div>
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you ship internationally?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, we ship to 12 countries and counting. International shipping rates and delivery times are calculated at checkout based on your location. Please note that customs duties and import taxes are the responsibility of the recipient.
+                    </div>
+                </div>
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I track my order?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Once your order ships, you'll receive an email with a tracking number and a link to the carrier's website. You can also track your order anytime from your account dashboard or by using the "Track My Order" link in the footer.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA BANNER ========== -->
+    <section class="py-16 bg-tech/5 dark:bg-slate-800/20">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="gear-card p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-tech/10 rounded-bl-full"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-neon/5 rounded-tr-full"></div>
+                <div class="relative z-10 text-center md:text-left">
+                    <span class="text-tech dark:text-neon font-semibold tracking-widest text-xs uppercase">Still Have Questions?</span>
+                    <h2 class="text-2xl md:text-3xl font-display font-bold text-soil dark:text-white mt-1">We're One Message Away</h2>
+                    <p class="text-dusk dark:text-gray-300 mt-2 max-w-lg">Our Portland team is standing by to help with anything rain-related.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 relative z-10 shrink-0 justify-center">
+                    <a href="#inquiry" class="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                        <i class="fas fa-paper-plane"></i> Send a Message
+                    </a>
+                    <a href="tel:+15552347246" class="btn-outline px-6 py-2.5 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                        <i class="fas fa-phone"></i> Call Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER – copied from reference ========== -->
+    <footer class="bg-white dark:bg-[#0F172A] text-soil dark:text-gray-300 pt-16 pb-8 border-t-4 border-tech transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="text-center md:text-left">
+                    <a href="index.html" class="inline-flex items-center justify-center md:justify-start gap-3 mb-6 group cursor-pointer">
+                        <div class="w-9 h-9 md:w-10 md:h-10 bg-tech rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-umbrella text-white text-base md:text-lg"></i>
+                        </div>
+                        <span class="text-lg md:text-2xl font-display font-bold tracking-tight text-soil dark:text-white group-hover:text-tech dark:group-hover:text-neon transition-colors duration-300">RainGuard</span>
+                    </a>
+                    <p class="text-sm text-dusk dark:text-gray-300 leading-relaxed mb-6">
+                        Durable rain gear, unbeatable prices, expert craftsmanship. Your one-stop shop for umbrellas, raincoats, and accessories.
+                    </p>
+                    <div class="flex justify-center md:justify-start gap-3">
+                        <a href="#" class="social-icon-tech"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-tech"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon-tech"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-tech dark:text-neon mb-5">Shop</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Umbrellas</a></li>
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Raincoats & Jackets</a></li>
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Rain Boots</a></li>
+                        <li><a href="products.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Accessories</a></li>
+                        <li><a href="collections.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Collections</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-tech dark:text-neon mb-5">Support</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">About Us</a></li>
+                        <li><a href="corporate.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Corporate Branding</a></li>
+                        <li><a href="#" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Warranty & Returns</a></li>
+                        <li><a href="contact.html" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Contact Us</a></li>
+                        <li><a href="#" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">FAQs</a></li>
+                        <li><a href="#" class="text-dusk dark:text-gray-300 hover:text-tech dark:hover:text-neon transition">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-tech dark:text-neon mb-5">Visit Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-map-marker-alt text-tech dark:text-neon"></i>
+                            <span>42 Storm Lane, Portland, OR 97205</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-phone text-tech dark:text-neon"></i>
+                            <span>(555) 234-RAIN</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-envelope text-tech dark:text-neon"></i>
+                            <span>hello@rainguard.com</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-dusk dark:text-gray-300">
+                            <i class="fas fa-clock text-tech dark:text-neon"></i>
+                            <span>Mon–Sat: 9am – 7pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-sand dark:border-slate-700/50 text-center text-sm text-dusk dark:text-gray-300">
+                <p>© 2026 RainGuard | Umbrella & Rain Gear Store. All rights reserved. <span class="text-tech dark:text-neon">☔ Stay dry, stay stylish.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme toggle
+            const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+            themeBtns.forEach(btn => {
+                btn?.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+                });
+            });
+            if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+            // RTL toggle
+            function setRTL(isRTL) {
+                const html = document.documentElement;
+                if (isRTL) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); }
+                else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+            }
+            const savedDir = localStorage.getItem('dir');
+            if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+            else document.documentElement.setAttribute('dir', 'ltr');
+
+            const rtlBtn = document.getElementById('rtl-toggle');
+            if (rtlBtn) {
+                rtlBtn.addEventListener('click', () => {
+                    const currentDir = document.documentElement.getAttribute('dir');
+                    setRTL(currentDir !== 'rtl');
+                });
+            }
+            const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+            if (mobileRtlBtn) {
+                mobileRtlBtn.addEventListener('click', () => {
+                    const currentDir = document.documentElement.getAttribute('dir');
+                    setRTL(currentDir !== 'rtl');
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const mobileToggle = document.getElementById('mobile-toggle');
+                    if (mobileMenu && mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                        if (mobileToggle && mobileToggle.querySelector('i')) {
+                            mobileToggle.querySelector('i').classList.remove('fa-times');
+                            mobileToggle.querySelector('i').classList.add('fa-bars');
+                        }
+                    }
+                });
+            }
+
+            // Mobile menu toggle
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileToggle && mobileMenu) {
+                mobileToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('open');
+                    const icon = mobileToggle.querySelector('i');
+                    if (mobileMenu.classList.contains('open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+                mobileMenu.querySelectorAll('a:not(#mobile-rtl-toggle)').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('open');
+                        if (mobileToggle.querySelector('i')) {
+                            mobileToggle.querySelector('i').classList.remove('fa-times');
+                            mobileToggle.querySelector('i').classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // Department selector
+            const deptOptions = document.querySelectorAll('.dept-option');
+            deptOptions.forEach(opt => {
+                opt.addEventListener('click', () => {
+                    deptOptions.forEach(o => o.classList.remove('active'));
+                    opt.classList.add('active');
+                });
+            });
+
+            // FAQ accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const item = q.closest('.faq-item');
+                    const isOpen = item.classList.contains('open');
+                    // Close all others
+                    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                    if (!isOpen) item.classList.add('open');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
